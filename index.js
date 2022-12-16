@@ -1,4 +1,5 @@
 
+
 const swiper = new Swiper('.swiper', {
     // Optional parameters\
     autoplay :{
@@ -9,6 +10,7 @@ const swiper = new Swiper('.swiper', {
     loop: true,
     pagination: {
       el: '.swiper-pagination',
+      clickable:true,
     },
     navigation: {
       nextEl: '.swiper-button-next',
@@ -17,6 +19,15 @@ const swiper = new Swiper('.swiper', {
   
   });
 
+// let show_list =document.getElementbyId("nav_title");
+// let nav_list =document.getElementbyId("");
+
+function show_list(){
+  show_list.style.display="block";
+}
+function hidelist(){
+  show_list.style.display="none"
+}
 
 
 

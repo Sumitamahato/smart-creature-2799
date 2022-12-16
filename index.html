@@ -7,14 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SuperMarket</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-   <link rel="stylesheet" href="./index.css">
- 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./index.css">
+
+    <style>
+        .insideData {
+            display: none;
+            position: absolute;
+            background-color: blue;
+            padding: 40px;
+            color: white;
+            font-family: serif
+        }
+
+        .navData:hover .insideData {
+            display: block;
+            width: 1100px;
+        }
+    </style>
+    </style>
 </head>
 
-<body >
+<body>
     <div id="container">
         <div id="head1">
             <h3><i class="fa fa-map-marker" aria-hidden="true"></i>Find a store</h3>
@@ -24,269 +38,501 @@
         <div id="head2">
             <img src="https://www.reliancedigital.in/build/client/images/loaders/rd_logo.svg">
             <input type="text" id="search-bar" placeholder="Find your favorite products">
-            <div>
-                <h3>Select your PIN Code</h3>
-                <h3><i class="fa fa-shopping-cart header__maininfo__list__item__icon" aria-hidden="true"></i>Cart</h3>
-                <h3><i class="fa fa-duotone fa-cart-shopping" aria-hidden="true"></i>Login</h3>
+            <h3>Select your PIN Code</h3>
+            <h3><i class="fa fa-shopping-cart header__maininfo__list__item__icon" aria-hidden="true"></i>Cart</h3>
+            <h3><i class="fa fa-duotone fa-cart-shopping" aria-hidden="true"></i>Login</h3>
+        </div>
+
+    </div>
+    <div id="nav">
+        <div id="navBar" style="display: flex;justify-content: space-between; ">
+            <div class="navigation navSale">Dresses
+                <div class="navBarPro" style="width:1100px"></div>
+            </div>
+            <div class="navigation navSale">Clothing
+                <div class="navBarPro" style="width:1100px"></div>
+            </div>
+            <div class="navigation navSale">Shoes
+                <div class="navBarPro" style="width:1100px"></div>
+            </div>
+            <div class="navigation navSale">Accessories
+                <div class="navBarPro" style="width:1100px"></div>
+            </div>
+            <div class="navigation navSale">BHLDN Weddings
+                <div class="navBarPro" style="width:1100px">
+                    <div style="display: flex;">
+                        <div>
+                            <h4>Shop by Category</h4>
+                            <div style="display: flex;">
+                                <ul type="none">
+                                    <li>Explore All BHLDN Weddings</li>
+                                    <li>Book An Appointment</li>
+                                    <li>Shop All Weddings</li>
+                                    <li>New!</li>
+                                    <li>Top Rated Styles</li>
+                                    <li>Bride</li>
+                                    <li>Wedding Dresses</li>
+                                    <li>Bridesmaid Dresses</li>
+                                </ul>
+                                <ul type="none">
+                                    <li>Mother of the Bride</li>
+                                    <li>Flower Girl Dresses</li>
+                                    <li>Wedding Guest Dresses</li>
+                                    <li>Robes & Lingerie</li>
+                                    <li>Plus</li>
+                                    <li>Accessories</li>
+                                    <li>Shoes</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <h4>Featured</h4>
+                            <ul type="none">
+                                <li>Exclusive: BHLDN by Carly Cushine</li>
+                                <li>New Spring Gowns</li>
+                                <li>Printed Bridesmaid Dresses</li>
+                                <li>The Pearl Edit</li>
+                                <li>BHLDN Wedding & Ocassion Stories</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Bridal by Style</h4>
+                            <ul type="none">
+                                <li>Modern Bride</li>
+                                <li>Bohemian Bride</li>
+                                <li>Beach & Destination Bride</li>
+                                <li>City Hall Bride</li>
+                                <li>Romantic Bride</li>
+                                <li>Classic Bride</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navigation navSale">Home & Furniture
+                <div class="navBarPro" style="width:1100px">
+                    <div style="display: flex">
+                        <div style="border-right: 1px solid rgb(204, 203, 203);">
+                            <h4  style="margin-left: 40px;margin-right: 40px;border-bottom: 1px solid rgb(204,203,203);">Shop by Category</h4>
+                            <div style="display: flex;">
+                                <ul type="none">
+                                    <li>Explore All Home & Furniture New!</li>
+                                    <li>Up to 50% Off Cozy Styles, Candles, Beauty, Jewelry & More</li>
+                                    <li>Bath</li>
+                                    <li>Bedding</li>
+                                    <li>Candles & Home Fragrance</li>
+                                    <li>Decor</li>
+                                    <li>Furniture</li>
+                                </ul>
+                                <ul type="none">
+                                    <li>Holiday Decor, Ornaments, Gift Wrap & More</li>
+                                    <li>Kids</li>
+                                    <li>Kitchen & Dining</li>
+                                    <li>Outdoor</li>
+                                    <li>Stationery</li>
+                                    <li>Stale Home & Furniture</li>
+                                    <li>Explore Terrain</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div style="border-right: 1px solid rgb(204, 203, 203);">
+                            <h4  style="margin-left: 40px;margin-right: 40px;border-bottom: 1px solid rgb(204,203,203);">Exclusively For Anthro: Arist Collaborations</h4>
+                            <ul type="none">
+                                <li>The George & Viv Holiday Shop</li>
+                                <li>Matilda Goad & Co.</li>
+                                <li>Amber Lewis</li>
+                                <li>Nathalie Lete</li>
+                                <li>Mark D. Sikes</li>
+                                <li>Lemieux et Cie</li>
+                                <li>Explore Artist Collaborations</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 style="margin-left: 40px;margin-right: 40px;border-bottom: 1px solid rgb(204,203,203);">AnthroLiving House Tours</h4>
+                            <ul type="none">
+                                <li>Less is More</li>
+                                <li>House of Hackney</li>
+                                <li>A Sense of Place</li>
+                                <li>Soulful Spaces</li>
+                                <li>Refreshed Perspectives</li>
+                                <li>The Story of Home</li>
+                                <li>Be Our Guest</li>
+                                <li>True Nature</li>
+                                <li>Lit From Within</li>
+                                <li>Explore AnthroLiving House Tours</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navigation navSale">Beauty & Wellness
+                <div class="navBarPro" style="width:1000px">
+                    <div style="display: flex;">
+                        <div style="border-right: 1px solid rgb(204, 203, 203);">
+                            <h4 style="margin-left: 40px;margin-right: 40px;border-bottom: 1px solid rgb(204,203,203);">Shop by Category</h4>
+                            <div style="display: flex;">
+                                <ul type="none">
+                                    <li>Shop All Beauty & Wellness</li>
+                                    <li>New!</li>
+                                    <li>Top-Rated</li>
+                                    <li>Beauty Gifts & Sets</li>
+                                    <li>Bath & Body</li>
+                                    <li>Candles & Home Fragrance</li>
+                                    <li>Fragrance</li>
+                                    <li>Hair care</li>
+                                </ul>
+                                <ul type="none">
+                                    <li>Makeup</li>
+                                    <li>Nails</li>
+                                    <li>SkinCare</li>
+                                    <li>Suncare</li>
+                                    <li>Tools & Brushes</li>
+                                    <li>Wellness</li>
+                                    <li>Workout Gear</li>
+                                    <li>Sale Beauty & Wellness</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div style="border-right: 1px solid rgb(204, 203, 203);">
+                            <h4 style="margin-right: 40px;margin-left: 40px;border-bottom: 1px solid rgb(204,203,203);">Featured</h4>
+                            <div>
+                                <ul type="none">
+                                    <li>The George & Viv Holiday Shop</li>
+                                    <li>Fashionista Exclusives</li>
+                                    <li>The Holiday 2022 Edit : Beauty & Self Care</li>
+                                    <li>Beauty Gifts Under $25</li>
+                                    <li>Travel Size</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div style="border-right: 1px solid rgb(204,203,203);padding-right:100px;">
+                            <h4 style="margin-left: 40px;border-bottom: 1px solid rgb(204,203,203);">Brand We Love</h4>
+                            <div>
+                                <ul type="none">
+                                    <li>Anastasia Beverly Hills</li>
+                                    <li>Capri Blue</li>
+                                    <li>Caudalie</li>
+                                    <li>ELEMIS</li>
+                                    <li>Floral Street</li>
+                                    <li>Nest Fragrances</li>
+                                    <li>NuFACE</li>
+                                    <li>Slip</li>
+                                    <li>Sunday Riley</li>
+                                    <li>Tocca</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navigation navSale">Garden & Outdoor
+                <div class="navBarPro">
+                    <h4 style="margin-left: 40px;border-bottom:1px solid rgb(204, 203, 203);padding-bottom:10px">
+                        Shop by Category</h4>
+                    <div style="display: flex;margin-top:-20px">
+                        <ul type="none" style="padding-right: 100px;">
+                            <li>Shop All Garden & Outdoor</li>
+                            <li>Painters</li>
+                            <li>Garden & Utility</li>
+                        </ul>
+                        <ul type="none" style="padding-right: 100px;">
+                            <li>Outdoor Living</li>
+                            <li>Furniture</li>
+                            <li>Plants & Flowers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="navigation navSale">Sale
+                <div class="navBarPro">
+                    <div style="display: flex;">
+                        <div id="saleLeft">
+                            <div id="big">
+                                <ul type="none">
+                                    <li><b>Shop by Category</b></li>
+                                    <hr>
+                                    <li>Shop All Sale</li>
+                                    <li>Freshly Cut</li>
+                                    <li>Accessories</li>
+                                    <li>Beauty & Wellness</li>
+                                    <li>Clothing</li>
+                                    <li>Home & Furniture</li>
+                                </ul>
+                            </div>
+                            <div id="small">
+                                <ul type="none">
+                                    <li>Jewelry</li>
+                                    <li>Petites</li>
+                                    <li>Plus</li>
+                                    <li>Shoes</li>
+                                    <li>BHLDN Weddings</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="saleRight">
+                            <ul type="none">
+                                <li><b>Shop by Price</b></li>
+                                <hr>
+                                <li>Under $25</li>
+                                <li>Under $50</li>
+                                <li>Under $75</li>
+                                <li>Under $100</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div id="head3">
-            <ul type="none">
-                <li>MOBILES & TABLETS</li>
-                <li>TELEVISIONS</li>
-                <li>AUDIO</li>
-                <li>HOME APPLIANCES</li>
-                <li>COMPUTERS</li>
-                <li>CAMERAS</li>
-                <li>KITCHEN APPLIANCES</li>
-                <li>PERSONAL CARE</li>
-            </ul>
-        </div>
-        
-        <div id="head4">
-            <img
-                src="https://www.reliancedigital.in/medias/Year-End-Sale-5000-Instant-Discount-Carousel-Banner-05-12-2022.jpg?context=bWFzdGVyfGltYWdlc3wxNDcwODh8aW1hZ2UvanBlZ3xpbWFnZXMvaDkzL2hiNS85OTI4MTY1NTg5MDIyLmpwZ3w4NDk3ZDFhZTM1YzUxYTg3MDFiMWZkZjhmMGE0ZWI2ZWZmYjU0MWNmOGJkMTAzZTYwMTdlNjI5MGNjYzZiOTIx">
-        </div>
+        </div>
+    <div id="head4">
+        <img
+            src="https://www.reliancedigital.in/medias/Year-End-Sale-5000-Instant-Discount-Carousel-Banner-05-12-2022.jpg?context=bWFzdGVyfGltYWdlc3wxNDcwODh8aW1hZ2UvanBlZ3xpbWFnZXMvaDkzL2hiNS85OTI4MTY1NTg5MDIyLmpwZ3w4NDk3ZDFhZTM1YzUxYTg3MDFiMWZkZjhmMGE0ZWI2ZWZmYjU0MWNmOGJkMTAzZTYwMTdlNjI5MGNjYzZiOTIx">
+    </div>
 
 
-        <!-- <div class="carousel" data-flickity='{"autoPlay": true}'>
+    <!-- <div class="carousel" data-flickity='{"autoPlay": true}'>
            <div class="carousel-cell" style="background-image:1.jpg"></div>
            <div class="carousel-cell" style="background-image:2.webp"></div>
            <div class="carousel-cell" style="background-image:3.webp"></div> -->
-           <div class="swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide">
-                <img src="https://www.reliancedigital.in/medias/Moto-G42-Carousel-Banner-09-12-2022.jpg?context=bWFzdGVyfGltYWdlc3wxMDMyNDN8aW1hZ2UvanBlZ3xpbWFnZXMvaGQ2L2g2ZC85OTI5ODI3Mzg1Mzc0LmpwZ3w4MzEyODVmNTUyNWIwODNlNTA1YThjNTA4Njg5ZmU1YTU1ZjZlMzM5NWY5ODI0ZWNmOTAwYjY5M2RhNWVkOTky" alt=""></div>
-              <div class="swiper-slide"><img src="https://www.reliancedigital.in/medias/Smartwatch-Carnival-Carousel-Banner-D.jpg?context=bWFzdGVyfGltYWdlc3w5MTMyMnxpbWFnZS9qcGVnfGltYWdlcy9oYmYvaGFmLzk5Mjk4MzI1NjI3MTguanBnfDBkOTJjZDk5YTI1MTU3NWU5MDc1NGQ0ZDg2YjFlOWRhOGRhN2FiMzgxMDY3YWI5Y2M1NDk0MjNjZjU1MzNjYjY" alt=""></div>
-              <div class="swiper-slide"><img src="https://www.reliancedigital.in/medias/Monitors-Carousel-Banner-02-12-2022.jpg?context=bWFzdGVyfGltYWdlc3w4Mjc4NHxpbWFnZS9qcGVnfGltYWdlcy9oNTEvaDNlLzk5MzExODEzNTkxMzQuanBnfDA5Nzc0YWExYjdjM2YzNTg4Njk4MDJjZGU1ZWQ4NzAzOTIzZDgxMWU2MjVhYjdkNTI2MzBhNWJhYzg0ZTZjMTk" alt=""></div>
-              <div class="swiper-slide"><img src="https://www.reliancedigital.in/medias/Winter-Sale-Carousel-Banner-2022.jpg?context=bWFzdGVyfGltYWdlc3w3ODA1OXxpbWFnZS9qcGVnfGltYWdlcy9oOGMvaDU3Lzk5MTgzMzY0MzQyMDYuanBnfDkxOGNjMWJiMjExYWUzYTQ0ODMzMTk5MjQ0YzY0YmVhNTE5ZjQxZTZjNzc4ZTRhNDhjYjc3N2I3NmZjNmM2ZDI" alt=""></div>
-              <div class="swiper-slide"><img src="https://www.reliancedigital.in/medias/Apple-S8-CLP-Banner-14-11-2022.jpg?context=bWFzdGVyfGltYWdlc3w5NzY3M3xpbWFnZS9qcGVnfGltYWdlcy9oNjAvaDBkLzk5MzExODU1MjA2NzAuanBnfDA3MWZiOGZlMzdjOTYzZDFhZGUyZWMzMjdmOTgxZmJjOGY1MTI2OGI0ZjA3YjU1YzUzNDllZjlkMmQwMmFkMjA" alt=""></div>
-              <div  class="swiper-slide"><img src="https://www.reliancedigital.in/medias/Apple-Accessories-Carousel-Banner-01-12-2022.jpg?context=bWFzdGVyfGltYWdlc3w3MjY3M3xpbWFnZS9qcGVnfGltYWdlcy9oZTIvaDg3Lzk5MjgxNzE1NTI3OTguanBnfDkzOTI0MDE5YzgxOTVmNzdiMTBlNWZhMTQwMWZmNDc1ZTU2MzY5YmIwZTBlZWQ2ZjRkYWVhYzBkZTkzMTM3Y2M" alt=""></div>
-              ...
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <img src="https://www.reliancedigital.in/medias/Moto-G42-Carousel-Banner-09-12-2022.jpg?context=bWFzdGVyfGltYWdlc3wxMDMyNDN8aW1hZ2UvanBlZ3xpbWFnZXMvaGQ2L2g2ZC85OTI5ODI3Mzg1Mzc0LmpwZ3w4MzEyODVmNTUyNWIwODNlNTA1YThjNTA4Njg5ZmU1YTU1ZjZlMzM5NWY5ODI0ZWNmOTAwYjY5M2RhNWVkOTky"
+                    alt="">
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-          
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-          
-            <!-- If we need scrollbar -->
-           
-          </div>
-
-
+            <div class="swiper-slide"><img
+                    src="https://www.reliancedigital.in/medias/Smartwatch-Carnival-Carousel-Banner-D.jpg?context=bWFzdGVyfGltYWdlc3w5MTMyMnxpbWFnZS9qcGVnfGltYWdlcy9oYmYvaGFmLzk5Mjk4MzI1NjI3MTguanBnfDBkOTJjZDk5YTI1MTU3NWU5MDc1NGQ0ZDg2YjFlOWRhOGRhN2FiMzgxMDY3YWI5Y2M1NDk0MjNjZjU1MzNjYjY"
+                    alt=""></div>
+            <div class="swiper-slide"><img
+                    src="https://www.reliancedigital.in/medias/Monitors-Carousel-Banner-02-12-2022.jpg?context=bWFzdGVyfGltYWdlc3w4Mjc4NHxpbWFnZS9qcGVnfGltYWdlcy9oNTEvaDNlLzk5MzExODEzNTkxMzQuanBnfDA5Nzc0YWExYjdjM2YzNTg4Njk4MDJjZGU1ZWQ4NzAzOTIzZDgxMWU2MjVhYjdkNTI2MzBhNWJhYzg0ZTZjMTk"
+                    alt=""></div>
+            <div class="swiper-slide"><img
+                    src="https://www.reliancedigital.in/medias/Winter-Sale-Carousel-Banner-2022.jpg?context=bWFzdGVyfGltYWdlc3w3ODA1OXxpbWFnZS9qcGVnfGltYWdlcy9oOGMvaDU3Lzk5MTgzMzY0MzQyMDYuanBnfDkxOGNjMWJiMjExYWUzYTQ0ODMzMTk5MjQ0YzY0YmVhNTE5ZjQxZTZjNzc4ZTRhNDhjYjc3N2I3NmZjNmM2ZDI"
+                    alt=""></div>
+            <div class="swiper-slide"><img
+                    src="https://www.reliancedigital.in/medias/Apple-S8-CLP-Banner-14-11-2022.jpg?context=bWFzdGVyfGltYWdlc3w5NzY3M3xpbWFnZS9qcGVnfGltYWdlcy9oNjAvaDBkLzk5MzExODU1MjA2NzAuanBnfDA3MWZiOGZlMzdjOTYzZDFhZGUyZWMzMjdmOTgxZmJjOGY1MTI2OGI0ZjA3YjU1YzUzNDllZjlkMmQwMmFkMjA"
+                    alt=""></div>
+            <div class="swiper-slide"><img
+                    src="https://www.reliancedigital.in/medias/Apple-Accessories-Carousel-Banner-01-12-2022.jpg?context=bWFzdGVyfGltYWdlc3w3MjY3M3xpbWFnZS9qcGVnfGltYWdlcy9oZTIvaDg3Lzk5MjgxNzE1NTI3OTguanBnfDkzOTI0MDE5YzgxOTVmNzdiMTBlNWZhMTQwMWZmNDc1ZTU2MzY5YmIwZTBlZWQ2ZjRkYWVhYzBkZTkzMTM3Y2M"
+                    alt=""></div>
+            ...
         </div>
-        <!-- <div id="head5">
-            <img src="https://www.reliancedigital.in/medias/Winter-Sale-Carousel-Banner-2022.jpg?context=bWFzdGVyfGltYWdlc3w3ODA1OXxpbWFnZS9qcGVnfGltYWdlcy9oOGMvaDU3Lzk5MTgzMzY0MzQyMDYuanBnfDkxOGNjMWJiMjExYWUzYTQ0ODMzMTk5MjQ0YzY0YmVhNTE5ZjQxZTZjNzc4ZTRhNDhjYjc3N2I3NmZjNmM2ZDI"
-                
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
 
-        <!-- </div> -->
-        <div id="head6">
-            <h1>ENTERTAINMENT FEST</h1>
-            <div class="head6">
-                <div>
-                    <img src="https://www.reliancedigital.in/medias/43-inch-UHD-TV-Small-Banner-05-12-2022.jpg?context=bWFzdGVyfGltYWdlc3w2MTc5NXxpbWFnZS9qcGVnfGltYWdlcy9oZDcvaGM2Lzk5MjgxNjcyNjAxOTAuanBnfDg4MjdjN2IwZWViMTNlNmM2ODdiOWZjNzU2M2RkZmVlZTMxMmM4ODRlZWQ3MWNhMWIwYWI3NmNhMDcxNjkxY2M"
-                        alt="">
-                </div>
-                <div>
-                    <img src="https://www.reliancedigital.in/medias/Headphones-and-Earphones-Entertainment-Fest-Small-Banner-02-12-2022.jpg?context=bWFzdGVyfGltYWdlc3w0MDQzNHxpbWFnZS9qcGVnfGltYWdlcy9oYTAvaDU0Lzk5MjY3ODEzMzc2MzAuanBnfGI1Y2Q4MDExYTAwOGEzYzhlNWQxOTI0MzU2ZWIyY2YyYWQ5NDE1M2EwYzNmMTNjNjA4MGZiMTU2Y2VlZGNlZDQ"
-                        alt="">
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
 
-                </div>
+        <!-- If we need scrollbar -->
+
+    </div>
 
 
-                <div>
-                    <img src="https://www.reliancedigital.in/medias/Best-Deals-in-TV-Small-Banner-05-12-2022.jpg?context=bWFzdGVyfGltYWdlc3w0ODE2NnxpbWFnZS9qcGVnfGltYWdlcy9oNGYvaDY1Lzk5MjgxNjcxOTQ2NTQuanBnfDhiODBlYTA4YmI1OTA0YjZkMTkzYjA0ZTRmOWQ5MzMxMjcyZDJjODY0YTE3MWE4M2ZlNDIxODRhNzFiODJkYjY"
-                        alt="">
-                </div>
-                <div>
-                    <img src="https://www.reliancedigital.in/medias/Soundbars-Entertainment-Fest-Small-Banner-02-12-2022.jpg?context=bWFzdGVyfGltYWdlc3wzMTg3NHxpbWFnZS9qcGVnfGltYWdlcy9oMzYvaGQ1Lzk5MjY3ODE0MDMxNjYuanBnfDY5ODQ2ZDU3NDFlMjgxYTY2YTViZmQ1ZTA4Y2U5ZTMwYjVlNjYzNTk3YzJjNzkyMDUwY2VkY2ZlZTViODQ1NjQ"
-                        alt="">
-                </div>
+    <div id="head6">
+        <h1>ENTERTAINMENT FEST</h1>
+        <div class="head6">
+            <div>
+                <img src="https://www.reliancedigital.in/medias/43-inch-UHD-TV-Small-Banner-05-12-2022.jpg?context=bWFzdGVyfGltYWdlc3w2MTc5NXxpbWFnZS9qcGVnfGltYWdlcy9oZDcvaGM2Lzk5MjgxNjcyNjAxOTAuanBnfDg4MjdjN2IwZWViMTNlNmM2ODdiOWZjNzU2M2RkZmVlZTMxMmM4ODRlZWQ3MWNhMWIwYWI3NmNhMDcxNjkxY2M"
+                    alt="">
+            </div>
+            <div>
+                <img src="https://www.reliancedigital.in/medias/Headphones-and-Earphones-Entertainment-Fest-Small-Banner-02-12-2022.jpg?context=bWFzdGVyfGltYWdlc3w0MDQzNHxpbWFnZS9qcGVnfGltYWdlcy9oYTAvaDU0Lzk5MjY3ODEzMzc2MzAuanBnfGI1Y2Q4MDExYTAwOGEzYzhlNWQxOTI0MzU2ZWIyY2YyYWQ5NDE1M2EwYzNmMTNjNjA4MGZiMTU2Y2VlZGNlZDQ"
+                    alt="">
+
+            </div>
+
+
+            <div>
+                <img src="https://www.reliancedigital.in/medias/Best-Deals-in-TV-Small-Banner-05-12-2022.jpg?context=bWFzdGVyfGltYWdlc3w0ODE2NnxpbWFnZS9qcGVnfGltYWdlcy9oNGYvaDY1Lzk5MjgxNjcxOTQ2NTQuanBnfDhiODBlYTA4YmI1OTA0YjZkMTkzYjA0ZTRmOWQ5MzMxMjcyZDJjODY0YTE3MWE4M2ZlNDIxODRhNzFiODJkYjY"
+                    alt="">
+            </div>
+            <div>
+                <img src="https://www.reliancedigital.in/medias/Soundbars-Entertainment-Fest-Small-Banner-02-12-2022.jpg?context=bWFzdGVyfGltYWdlc3wzMTg3NHxpbWFnZS9qcGVnfGltYWdlcy9oMzYvaGQ1Lzk5MjY3ODE0MDMxNjYuanBnfDY5ODQ2ZDU3NDFlMjgxYTY2YTViZmQ1ZTA4Y2U5ZTMwYjVlNjYzNTk3YzJjNzkyMDUwY2VkY2ZlZTViODQ1NjQ"
+                    alt="">
             </div>
         </div>
-        <div id="head7">
-            <span>
-                <h1>PRICE DROP ON APPLE SMARTWATCHES |
-            </span>
-            <span>VIEW ALL</span>
-        </div>
+    </div>
+    <div id="head7">
+        <span>
+            <h1>PRICE DROP ON APPLE SMARTWATCHES |
+        </span>
+        <span>VIEW ALL</span>
+    </div>
 
 
-        <!-- <div>
+    <!-- <div>
         <h1>PRICE DROP ON APPLE SMARTWATCHES |</h1>
         <h3>VIEW ALL</h3>
         </div> -->
-        <div id="dis">
-            <div class="picwatch">
-                <div>
-                    <img src="https://www.reliancedigital.in/medias/Apple-Watches-Producst-Carousel-29-11-2022.jpg?context=bWFzdGVyfGltYWdlc3w1NTYyOHxpbWFnZS9qcGVnfGltYWdlcy9oOTQvaDQyLzk5MjgzNzA5Nzg4NDYuanBnfDg5OTE2MzFkOTU2YmI1ODhjOTZmODQ2YzkyNjUzNjYwZTYxZGQ2NGY4OTdhNmU3YjBkZGZmZGI3MzM2OWQwNzQ"
-                        alt="">
-
-                </div>
-            </div>
-
-            <div class="watch">
-                <div>
-                    <img src="https://www.reliancedigital.in/medias/Apple-Series-8-Sports-Fitness-Watches-493177912-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w0MTE0NHxpbWFnZS9qcGVnfGltYWdlcy9oMTcvaDJiLzk4OTE5MTkxNjc1MTguanBnfDJkZTkwN2Q3ZmI2OTA3ZDk3N2ZjNjA2ZjRmMTRhNGQ0MDk1MzU2YmJkZTIzZDE5MTAzNDYzNjIwYjk3NjZhYTg"
-                        alt="">
-                    <h3>Apple Watch Series 8 Gps 41 mm Straight</h3>
-                    <p>Deal Price Rs 43,610.00</p>
-                    <p>M.R.P: Rs 45900</p>
-                    <p>You save 5% (Rs 2290)</p>
-                    <button>OFFERS AVAILABLE</button>
-
-
-                </div>
-
-                <div>
-                    <img src="https://www.reliancedigital.in/medias/Apple-SE-Sports-Fitness-Watches-493177921-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wzNjk1M3xpbWFnZS9qcGVnfGltYWdlcy9oNjAvaDhhLzk4OTE5ODYwNzk3NzQuanBnfGVkNWZhOGU5YjI5NjZhNjQ3ZjUwNjZjYmRhNTU5YmVjOTMzZmFiZDA1YjY1NmExZjRhNGY0N2I3ODg4NzQxMzg"
-                        alt="">
-                    <h3>Apple Watch SE GPS-44 mm Straight Aluminium </h3>
-                    <p> *****(1 Reviews) </p>
-                    <p>Deal Price Rs 32,240.00</p>
-                    <p>M.R.P: Rs 32,900</p>
-                    <p>You save 2% (Rs 660)</p>
-                    <button>OFFERS AVAILABLE</button>
-                </div>
-
-                <div>
-                    <img src="https://www.reliancedigital.in/medias/Apple-Series-8-Sports-Fitness-Watches-493177899-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w0MjI3NHxpbWFnZS9qcGVnfGltYWdlcy9oZTkvaGQzLzk4OTE4ODc3MTAyMzguanBnfDkxOWE5MThkMjliMDQzYjg1ZDQ5ZGE2ZmIxNWU3OWM5ZDc5N2JiMjE1MzZlNWY1MjcxNzZjOTEwMDU0ZDg5NDY"
-                        alt="">
-                    <h3>Apple Watch Series 8 Gps + Cellular 45 mm </h3>
-                    <p> *****(1 Reviews) </p>
-                    <p>Deal Price Rs 56,000.00</p>
-                    <p>M.R.P: Rs 58,900</p>
-                    <p>You save 5% (Rs 2,900)</p>
-                    <button>OFFERS AVAILABLE</button>
-
-                </div>
-
-                <div>
-                    <img src="https://www.reliancedigital.in/medias/Apple-Series-8-Sports-Fitness-Watches-493177908-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w0MDg5M3xpbWFnZS9qcGVnfGltYWdlcy9oM2UvaDI3Lzk4OTE5MTI2MTM5MTguanBnfDY3NzQ2YjhkZTBiM2I3MmQ2MmFmZGIzYTBiNjNkOGQyOGMzNmVlOTc1MDMwZTNiMmRiMjA2YzhkNDRhNDI3MWE"
-                        alt="">
-                    <h3>Apple Watch Series 8 Gps 45 mm Midnight Aluminium Case with Midnight </h3>
-                    <p>Deal Price Rs 47,920.00</p>
-                    <p>M.R.P: Rs 48,900</p>
-                    <p>You save 2% (Rs 980)</p>
-                    <button>OFFERS AVAILABLE</button>
-                </div>
-            </div>
-        </div>
-        <div id="head8">
-            <h1>BIGGEST PRICE DROP ON ROOM HEATERS</h1>
-            <div class="head8">
-                <div>
-                    <img src="https://www.reliancedigital.in/medias/Orient-Electric-HC2004D-Heater-493627165-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wyMzU1OXxpbWFnZS9qcGVnfGltYWdlcy9oOWUvaDQwLzk5MTgwMDc0MTA3MTguanBnfDczODc4NDQzMzc2MTU3MDc0ZDA1ODFhMWM2NDU5YTViNGIwYjhlYTliN2QxOWQyYjBkNDhmMjE4NThmZTNkMTM"
-                        alt="">
-                    <h3>Oriented Convector HC2004D Fan-based Room Heater with Twin-Fans, Black</h3>
-                    <p>Deal Price: Rs 1,899.00</p>
-                    M.R.P:Rs (3,990.00)
-                    <p>You save 52% (Rs 2,091)</p>
-                    <button>OFFERS AVAILABLE</button>
-                </div>
-                <div>
-                    <img src="https://www.reliancedigital.in/medias/Usha-QH-3002-Radiators-490784083-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wxMDg4Njh8aW1hZ2UvanBlZ3xpbWFnZXMvaDdhL2g4Ni85NDE2NTExNTUzNTY2LmpwZ3xmMTQyY2Y0ZDZkZWZmZDRmM2ZjNTgyMGMwNGQ4ODI0MzBiOWIxOTc4NTZhOTRhMDQ0ZmEwNTYzNGNjMzBmN2Mx"
-                        alt="">
-                    <h3>Usha Quartz QH 3002 Fan-Based Heater with Low Power Consumption</h3>
-                    <p> *****(1 Reviews) </p>
-                    <p>Deal Price: Rs 1,249.00</p>
-                    M.R.P:Rs (1,890.00)
-                    <p>You save 34% (Rs 641)</p>
-                    <button>OFFERS AVAILABLE</button>
-                </div>
-                <div>
-                    <img src="https://www.reliancedigital.in/medias/Candes-Infra3-Radiators-493620550-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w0MjU1MnxpbWFnZS9qcGVnfGltYWdlcy9oZmUvaDg4Lzk4OTIxODQ4NTA0NjIuanBnfDY3MWJlM2Y2YTRkNjMwYjcxMzBiYzA5N2ZlMzEyNTE2ZjBjM2NiZGIzNjFmOWVjMThkNzI5ZWY2ZDkwMmZmYzQ"
-                        alt="">
-                    <h3>Usha Quartz QH 3002 Fan-Based Heater with Low Power Consumption</h3>
-                    <p>Deal Price: Rs 1,799.00</p>
-                    M.R.P:Rs (2,699.00)
-                    <p>You save 33% (Rs 900)</p>
-                    <button>OFFERS AVAILABLE</button>
-
-                </div>
-
-
-                <div>
-                    <img src="https://www.reliancedigital.in/medias/Candes-INOVARH1CC-Heater-493627147-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wyMjkxOXxpbWFnZS9qcGVnfGltYWdlcy9oOTQvaDRiLzk5MTgwMDcwODMwMzguanBnfGFhMDZlZjI4NzAzNTIwMjQyNjI2ZjkzY2YxNDk2NzU2ZmIzZTdhZTM5MWUwYmE5Mzg4NDZlOWE2ZTYwNjQxZjE"
-                        alt="">
-                    <h3>Candes Inova 2000w Fan-based room Heater with Over-Heat Protection, White</h3>
-                    <p>Deal Price: Rs 1,499.00</p>
-                    M.R.P:Rs (1,699.00)
-                    <p>You save 12% (Rs 200)</p>
-                    <button>OFFERS AVAILABLE</button>
-                </div>
-
-                <div>
-                    <img src="https://www.reliancedigital.in/medias/Candes-Gloster-Radiators-493620551-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wzMTY5NXxpbWFnZS9qcGVnfGltYWdlcy9oMzMvaDU5Lzk4Nzk3MjQwNjQ3OTguanBnfDFiZjM0MDE0ZmUxMGVmNTVmMGEyN2MwNTZmM2IzZGY3MGU3OWNiYTJkMGEwYzYwNzlkMGU4Y2Y5YjU1ODAzZDU"
-                        alt="">
-                    <h3>Candes Inova 2000 Watts All in one Silet Blower fan Room Heater (White) </h3>
-                    <p>Deal Price: Rs 1,319.00</p>
-                    M.R.P:Rs (1,699.00)
-                    <p>You save 22% (Rs 380)</p>
-                    <button>OFFERS AVAILABLE</button>
-                </div>
-            </div>
-        </div>
-        <div id="head9">
-            <h1>GREAT DEALS ON ELECTRONICS</h1>
-            <div class="head9">
-                <img src="https://www.reliancedigital.in/medias/Smartwatches-Small-Banners-01.jpg?context=bWFzdGVyfGltYWdlc3w0NDA0MnxpbWFnZS9qcGVnfGltYWdlcy9oNTAvaGRiLzk5MjgzNzA5MTMzMTAuanBnfGYwOWU2ZjQ3Y2Y0OWI2NmVhZGVkYWM2M2ZiMzQ4YTlhODRkZDY4ODZmODA1OGQyZWNiYWVhODNmNWM2YWMwMmY"
-                    alt="">
-                <img src="https://www.reliancedigital.in/medias/Realme-Smart-TV-Great-Deals-Banner-13-12-2022.jpg?context=bWFzdGVyfGltYWdlc3w3NzY3MHxpbWFnZS9qcGVnfGltYWdlcy9oNzUvaDg2Lzk5MzExODY3NjU4NTQuanBnfDA5YzNlMTkwNmM0ZWI3ZGJlYjI5Y2E0ZmQ5M2M5YjNkZmZjZmVlMjBmOGU1ZGIwNDY3NjFhNTcwMWM4ZmFlOWI"
-                    alt="">
-                <img src="https://www.reliancedigital.in/medias/Printers-Small-Banners-01-1-.jpg?context=bWFzdGVyfGltYWdlc3w0MDAwNHxpbWFnZS9qcGVnfGltYWdlcy9oNGYvaGQxLzk5Mjg3MzAzNDU1MDIuanBnfGMyNTg3NWQyZWRmMGU2M2EzZmEwM2U2MWNlMTA3ZWQzYjk4MmRhM2EzYjY0N2FiZGM4OGFlYWQ2NjBlZjE4YWE"
-                    alt="">
-                <img src="https://www.reliancedigital.in/medias/Washing-Machines-Small-Banners.jpg?context=bWFzdGVyfGltYWdlc3w0NDcwMHxpbWFnZS9qcGVnfGltYWdlcy9oNWIvaDUwLzk5MTM3Nzc3MTcyNzguanBnfGMyNWJhNDNiMTFkMjE4YmQ2OGRiMzdkMGIxNmZmZDhiYzViMTBjY2I1ZDllYzAyMWFjN2FlZTU1ZGVmMDk4MmU"
+    <div id="dis">
+        <div class="picwatch">
+            <div>
+                <img src="https://www.reliancedigital.in/medias/Apple-Watches-Producst-Carousel-29-11-2022.jpg?context=bWFzdGVyfGltYWdlc3w1NTYyOHxpbWFnZS9qcGVnfGltYWdlcy9oOTQvaDQyLzk5MjgzNzA5Nzg4NDYuanBnfDg5OTE2MzFkOTU2YmI1ODhjOTZmODQ2YzkyNjUzNjYwZTYxZGQ2NGY4OTdhNmU3YjBkZGZmZGI3MzM2OWQwNzQ"
                     alt="">
 
-                <img src="https://www.reliancedigital.in/medias/Winter-Appliances-Small-banners.jpg?context=bWFzdGVyfGltYWdlc3w2ODA0M3xpbWFnZS9qcGVnfGltYWdlcy9oYTUvaDhmLzk5MTM3NzczMjQwNjIuanBnfDdjMTE5YzUzNjcyODZiNDljNGJlNDMzZTNkNGI5Nzg2ZjlhOTg0YmFhYTViOTZmOTFkNmY1MWRlZGQ4NWY5ZDY"
-                    alt="">
-                <img src="https://www.reliancedigital.in/medias/True-Wireless-Small-Banners.jpg?context=bWFzdGVyfGltYWdlc3w0NjcyOXxpbWFnZS9qcGVnfGltYWdlcy9oODAvaDljLzk5MTM3NzcyNTg1MjYuanBnfGY3MDIxZDZlYTBhMjEwYjQ4NGIzMmQwZjdjMzQ2M2FhYzIwYWE0NGE4MzFmYjRlZjQwNzFlZjk2NWMwMzYxN2Y"
-                    alt="">
-                <img src="https://www.reliancedigital.in/medias/Samsung-M13-5G-Great-Deals-Banner-22-11-2022.jpg?context=bWFzdGVyfGltYWdlc3wzNDUzN3xpbWFnZS9qcGVnfGltYWdlcy9oNDgvaGY3Lzk5MjM5MDIzNDExNTAuanBnfDdiZjliNDZlOWUxZDFjZDQ2MDkzYjdjZDZhNDVlNWI0MGYwNTAwOWJkOWM4MWUzMTUyYmNmZmRmZjk3NjIwYjk"
-                    alt="">
-                <img src="https://www.reliancedigital.in/medias/MackBook-Appliances-Small-banners.jpg?context=bWFzdGVyfGltYWdlc3w0Mjc0NXxpbWFnZS9qcGVnfGltYWdlcy9oNTYvaDkyLzk5MTkwODgzMjg3MzQuanBnfDcxYmMyMDMxMjdiMzUxYzE2NmJkYTU4ZDBlNTQxNjBkZWViYjQ1Mzc2Y2IyOWYwNTllODhkNmRlZjA0NjM3NmI"
-                    alt="">
             </div>
         </div>
 
-        <div class="swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide">
-                <img src="https://www.reliancedigital.in/medias/Moto-G42-Carousel-Banner-09-12-2022.jpg?context=bWFzdGVyfGltYWdlc3wxMDMyNDN8aW1hZ2UvanBlZ3xpbWFnZXMvaGQ2L2g2ZC85OTI5ODI3Mzg1Mzc0LmpwZ3w4MzEyODVmNTUyNWIwODNlNTA1YThjNTA4Njg5ZmU1YTU1ZjZlMzM5NWY5ODI0ZWNmOTAwYjY5M2RhNWVkOTky" alt=""></div>
-              <div class="swiper-slide"><img src="https://www.reliancedigital.in/medias/Smartwatch-Carnival-Carousel-Banner-D.jpg?context=bWFzdGVyfGltYWdlc3w5MTMyMnxpbWFnZS9qcGVnfGltYWdlcy9oYmYvaGFmLzk5Mjk4MzI1NjI3MTguanBnfDBkOTJjZDk5YTI1MTU3NWU5MDc1NGQ0ZDg2YjFlOWRhOGRhN2FiMzgxMDY3YWI5Y2M1NDk0MjNjZjU1MzNjYjY" alt=""></div>
-              <div class="swiper-slide"><img src="https://www.reliancedigital.in/medias/Monitors-Carousel-Banner-02-12-2022.jpg?context=bWFzdGVyfGltYWdlc3w4Mjc4NHxpbWFnZS9qcGVnfGltYWdlcy9oNTEvaDNlLzk5MzExODEzNTkxMzQuanBnfDA5Nzc0YWExYjdjM2YzNTg4Njk4MDJjZGU1ZWQ4NzAzOTIzZDgxMWU2MjVhYjdkNTI2MzBhNWJhYzg0ZTZjMTk" alt=""></div>
-              <div class="swiper-slide"><img src="https://www.reliancedigital.in/medias/Winter-Sale-Carousel-Banner-2022.jpg?context=bWFzdGVyfGltYWdlc3w3ODA1OXxpbWFnZS9qcGVnfGltYWdlcy9oOGMvaDU3Lzk5MTgzMzY0MzQyMDYuanBnfDkxOGNjMWJiMjExYWUzYTQ0ODMzMTk5MjQ0YzY0YmVhNTE5ZjQxZTZjNzc4ZTRhNDhjYjc3N2I3NmZjNmM2ZDI" alt=""></div>
-              <div class="swiper-slide"><img src="https://www.reliancedigital.in/medias/Apple-S8-CLP-Banner-14-11-2022.jpg?context=bWFzdGVyfGltYWdlc3w5NzY3M3xpbWFnZS9qcGVnfGltYWdlcy9oNjAvaDBkLzk5MzExODU1MjA2NzAuanBnfDA3MWZiOGZlMzdjOTYzZDFhZGUyZWMzMjdmOTgxZmJjOGY1MTI2OGI0ZjA3YjU1YzUzNDllZjlkMmQwMmFkMjA" alt=""></div>
-              <div  class="swiper-slide"><img src="https://www.reliancedigital.in/medias/Apple-Accessories-Carousel-Banner-01-12-2022.jpg?context=bWFzdGVyfGltYWdlc3w3MjY3M3xpbWFnZS9qcGVnfGltYWdlcy9oZTIvaDg3Lzk5MjgxNzE1NTI3OTguanBnfDkzOTI0MDE5YzgxOTVmNzdiMTBlNWZhMTQwMWZmNDc1ZTU2MzY5YmIwZTBlZWQ2ZjRkYWVhYzBkZTkzMTM3Y2M" alt=""></div>
-              ...
+        <div class="watch">
+            <div>
+                <img src="https://www.reliancedigital.in/medias/Apple-Series-8-Sports-Fitness-Watches-493177912-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w0MTE0NHxpbWFnZS9qcGVnfGltYWdlcy9oMTcvaDJiLzk4OTE5MTkxNjc1MTguanBnfDJkZTkwN2Q3ZmI2OTA3ZDk3N2ZjNjA2ZjRmMTRhNGQ0MDk1MzU2YmJkZTIzZDE5MTAzNDYzNjIwYjk3NjZhYTg"
+                    alt="">
+                <h3>Apple Watch Series 8 Gps 41 mm Straight</h3>
+                <p>Deal Price Rs 43,610.00</p>
+                <p> *****(1 Reviews) </p>
+                <p>M.R.P: Rs 45900</p>
+                <p>You save 5% (Rs 2290)</p>
+                <button>OFFERS AVAILABLE</button>
+
+
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-          
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-          
-            <!-- If we need scrollbar -->
-           
-          </div>
 
-         </div>
+            <div>
+                <img src="https://www.reliancedigital.in/medias/Apple-SE-Sports-Fitness-Watches-493177921-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wzNjk1M3xpbWFnZS9qcGVnfGltYWdlcy9oNjAvaDhhLzk4OTE5ODYwNzk3NzQuanBnfGVkNWZhOGU5YjI5NjZhNjQ3ZjUwNjZjYmRhNTU5YmVjOTMzZmFiZDA1YjY1NmExZjRhNGY0N2I3ODg4NzQxMzg"
+                    alt="">
+                <h3>Apple Watch SE GPS-44 mm Straight Aluminium </h3>
+                <p> *****(1 Reviews) </p>
+                <p>Deal Price Rs 32,240.00</p>
+                <p>M.R.P: Rs 32,900</p>
+                <p>You save 2% (Rs 660)</p>
+                <button>OFFERS AVAILABLE</button>
+            </div>
+
+            <div>
+                <img src="https://www.reliancedigital.in/medias/Apple-Series-8-Sports-Fitness-Watches-493177899-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w0MjI3NHxpbWFnZS9qcGVnfGltYWdlcy9oZTkvaGQzLzk4OTE4ODc3MTAyMzguanBnfDkxOWE5MThkMjliMDQzYjg1ZDQ5ZGE2ZmIxNWU3OWM5ZDc5N2JiMjE1MzZlNWY1MjcxNzZjOTEwMDU0ZDg5NDY"
+                    alt="">
+                <h3>Apple Watch Series 8 Gps + Cellular 45 mm </h3>
+                <p> *****(1 Reviews) </p>
+                <p>Deal Price Rs 56,000.00</p>
+                <p>M.R.P: Rs 58,900</p>
+                <p>You save 5% (Rs 2,900)</p>
+                <button>OFFERS AVAILABLE</button>
+
+            </div>
+
+            <div>
+                <img src="https://www.reliancedigital.in/medias/Apple-Series-8-Sports-Fitness-Watches-493177908-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w0MDg5M3xpbWFnZS9qcGVnfGltYWdlcy9oM2UvaDI3Lzk4OTE5MTI2MTM5MTguanBnfDY3NzQ2YjhkZTBiM2I3MmQ2MmFmZGIzYTBiNjNkOGQyOGMzNmVlOTc1MDMwZTNiMmRiMjA2YzhkNDRhNDI3MWE"
+                    alt="">
+                <h3>Apple Watch Series 8 Gps 45 mm Midnight Aluminium Case with Midnight </h3>
+                <p>Deal Price Rs 47,920.00</p>
+                <p>M.R.P: Rs 48,900</p>
+                <p>You save 2% (Rs 980)</p>
+                <button>OFFERS AVAILABLE</button>
+            </div>
         </div>
-        
+    </div>
+    <div id="head8">
+        <h1>BIGGEST PRICE DROP ON ROOM HEATERS</h1>
+        <div class="head8">
+            <div>
+                <img src="https://www.reliancedigital.in/medias/Orient-Electric-HC2004D-Heater-493627165-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wyMzU1OXxpbWFnZS9qcGVnfGltYWdlcy9oOWUvaDQwLzk5MTgwMDc0MTA3MTguanBnfDczODc4NDQzMzc2MTU3MDc0ZDA1ODFhMWM2NDU5YTViNGIwYjhlYTliN2QxOWQyYjBkNDhmMjE4NThmZTNkMTM"
+                    alt="">
+                <h3>Oriented Convector HC2004D Fan-based Room Heater with Twin-Fans, Black</h3>
+                <p>Deal Price: Rs 1,899.00</p>
+                M.R.P:Rs (3,990.00)
+                <p>You save 52% (Rs 2,091)</p>
+                <button>OFFERS AVAILABLE</button>
+            </div>
+            <div>
+                <img src="https://www.reliancedigital.in/medias/Usha-QH-3002-Radiators-490784083-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wxMDg4Njh8aW1hZ2UvanBlZ3xpbWFnZXMvaDdhL2g4Ni85NDE2NTExNTUzNTY2LmpwZ3xmMTQyY2Y0ZDZkZWZmZDRmM2ZjNTgyMGMwNGQ4ODI0MzBiOWIxOTc4NTZhOTRhMDQ0ZmEwNTYzNGNjMzBmN2Mx"
+                    alt="">
+                <h3>Usha Quartz QH 3002 Fan-Based Heater with Low Power Consumption</h3>
+                <p>Deal Price: Rs 1,249.00</p>
+                M.R.P:Rs (1,890.00)
+                <p>You save 34% (Rs 641)</p>
+                <button>OFFERS AVAILABLE</button>
+            </div>
+            <div>
+                <img src="https://www.reliancedigital.in/medias/Candes-Infra3-Radiators-493620550-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w0MjU1MnxpbWFnZS9qcGVnfGltYWdlcy9oZmUvaDg4Lzk4OTIxODQ4NTA0NjIuanBnfDY3MWJlM2Y2YTRkNjMwYjcxMzBiYzA5N2ZlMzEyNTE2ZjBjM2NiZGIzNjFmOWVjMThkNzI5ZWY2ZDkwMmZmYzQ"
+                    alt="">
+                <h3>Usha Quartz QH 3002 Fan-Based Heater with Low Power Consumption</h3>
+                <p>Deal Price: Rs 1,799.00</p>
+                M.R.P:Rs (2,699.00)
+                <p>You save 33% (Rs 900)</p>
+                <button>OFFERS AVAILABLE</button>
+
+            </div>
 
 
+            <div>
+                <img src="https://www.reliancedigital.in/medias/Candes-INOVARH1CC-Heater-493627147-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wyMjkxOXxpbWFnZS9qcGVnfGltYWdlcy9oOTQvaDRiLzk5MTgwMDcwODMwMzguanBnfGFhMDZlZjI4NzAzNTIwMjQyNjI2ZjkzY2YxNDk2NzU2ZmIzZTdhZTM5MWUwYmE5Mzg4NDZlOWE2ZTYwNjQxZjE"
+                    alt="">
+                <h3>Candes Inova 2000w Fan-based room Heater with Over-Heat Protection, White</h3>
+                <p>Deal Price: Rs 1,499.00</p>
+                M.R.P:Rs (1,699.00)
+                <p>You save 12% (Rs 200)</p>
+                <button>OFFERS AVAILABLE</button>
+            </div>
 
+            <div>
+                <img src="https://www.reliancedigital.in/medias/Candes-Gloster-Radiators-493620551-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wzMTY5NXxpbWFnZS9qcGVnfGltYWdlcy9oMzMvaDU5Lzk4Nzk3MjQwNjQ3OTguanBnfDFiZjM0MDE0ZmUxMGVmNTVmMGEyN2MwNTZmM2IzZGY3MGU3OWNiYTJkMGEwYzYwNzlkMGU4Y2Y5YjU1ODAzZDU"
+                    alt="">
+                <h3>Candes Inova 2000 Watts All in one Silet Blower fan Room Heater (White) </h3>
+                <p>Deal Price: Rs 1,319.00</p>
+                M.R.P:Rs (1,699.00)
+                <p>You save 22% (Rs 380)</p>
+                <button>OFFERS AVAILABLE</button>
+            </div>
+        </div>
+    </div>
+    <div id="head9">
+        <h1>GREAT DEALS ON ELECTRONICS</h1>
+        <div class="head9">
+            <img src="https://www.reliancedigital.in/medias/Smartwatches-Small-Banners-01.jpg?context=bWFzdGVyfGltYWdlc3w0NDA0MnxpbWFnZS9qcGVnfGltYWdlcy9oNTAvaGRiLzk5MjgzNzA5MTMzMTAuanBnfGYwOWU2ZjQ3Y2Y0OWI2NmVhZGVkYWM2M2ZiMzQ4YTlhODRkZDY4ODZmODA1OGQyZWNiYWVhODNmNWM2YWMwMmY"
+                alt="">
+            <img src="https://www.reliancedigital.in/medias/Realme-Smart-TV-Great-Deals-Banner-13-12-2022.jpg?context=bWFzdGVyfGltYWdlc3w3NzY3MHxpbWFnZS9qcGVnfGltYWdlcy9oNzUvaDg2Lzk5MzExODY3NjU4NTQuanBnfDA5YzNlMTkwNmM0ZWI3ZGJlYjI5Y2E0ZmQ5M2M5YjNkZmZjZmVlMjBmOGU1ZGIwNDY3NjFhNTcwMWM4ZmFlOWI"
+                alt="">
+            <img src="https://www.reliancedigital.in/medias/Printers-Small-Banners-01-1-.jpg?context=bWFzdGVyfGltYWdlc3w0MDAwNHxpbWFnZS9qcGVnfGltYWdlcy9oNGYvaGQxLzk5Mjg3MzAzNDU1MDIuanBnfGMyNTg3NWQyZWRmMGU2M2EzZmEwM2U2MWNlMTA3ZWQzYjk4MmRhM2EzYjY0N2FiZGM4OGFlYWQ2NjBlZjE4YWE"
+                alt="">
+            <img src="https://www.reliancedigital.in/medias/Washing-Machines-Small-Banners.jpg?context=bWFzdGVyfGltYWdlc3w0NDcwMHxpbWFnZS9qcGVnfGltYWdlcy9oNWIvaDUwLzk5MTM3Nzc3MTcyNzguanBnfGMyNWJhNDNiMTFkMjE4YmQ2OGRiMzdkMGIxNmZmZDhiYzViMTBjY2I1ZDllYzAyMWFjN2FlZTU1ZGVmMDk4MmU"
+                alt="">
 
-        <div id="head10">
-            <h1>THE RELIANCE DIGITAL BRAND PROMISE</h1>
+            <img src="https://www.reliancedigital.in/medias/Winter-Appliances-Small-banners.jpg?context=bWFzdGVyfGltYWdlc3w2ODA0M3xpbWFnZS9qcGVnfGltYWdlcy9oYTUvaDhmLzk5MTM3NzczMjQwNjIuanBnfDdjMTE5YzUzNjcyODZiNDljNGJlNDMzZTNkNGI5Nzg2ZjlhOTg0YmFhYTViOTZmOTFkNmY1MWRlZGQ4NWY5ZDY"
+                alt="">
+            <img src="https://www.reliancedigital.in/medias/True-Wireless-Small-Banners.jpg?context=bWFzdGVyfGltYWdlc3w0NjcyOXxpbWFnZS9qcGVnfGltYWdlcy9oODAvaDljLzk5MTM3NzcyNTg1MjYuanBnfGY3MDIxZDZlYTBhMjEwYjQ4NGIzMmQwZjdjMzQ2M2FhYzIwYWE0NGE4MzFmYjRlZjQwNzFlZjk2NWMwMzYxN2Y"
+                alt="">
+            <img src="https://www.reliancedigital.in/medias/Samsung-M13-5G-Great-Deals-Banner-22-11-2022.jpg?context=bWFzdGVyfGltYWdlc3wzNDUzN3xpbWFnZS9qcGVnfGltYWdlcy9oNDgvaGY3Lzk5MjM5MDIzNDExNTAuanBnfDdiZjliNDZlOWUxZDFjZDQ2MDkzYjdjZDZhNDVlNWI0MGYwNTAwOWJkOWM4MWUzMTUyYmNmZmRmZjk3NjIwYjk"
+                alt="">
+            <img src="https://www.reliancedigital.in/medias/MackBook-Appliances-Small-banners.jpg?context=bWFzdGVyfGltYWdlc3w0Mjc0NXxpbWFnZS9qcGVnfGltYWdlcy9oNTYvaDkyLzk5MTkwODgzMjg3MzQuanBnfDcxYmMyMDMxMjdiMzUxYzE2NmJkYTU4ZDBlNTQxNjBkZWViYjQ1Mzc2Y2IyOWYwNTllODhkNmRlZjA0NjM3NmI"
+                alt="">
+        </div>
+    </div>
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <img
+                    src="https://www.reliancedigital.in/medias/airpods-pro-2nd-gen-Buy-now-NPI-Banner-01-11-2022.jpg?context=bWFzdGVyfGltYWdlc3wxMDM4NjB8aW1hZ2UvanBlZ3xpbWFnZXMvaDQ2L2g2Ny85OTIyNDU2MTkxMDA2LmpwZ3w0MGQxZjFhYjQ0ZjU1NTQzZjJiOGJmYzZhMDg5NTY5M2Y3NzIxZDkzOTQ2Yjg4YmNmOWZlMzc4OWM0YjlkMjA2">
+            </div>
+
+            <div class="swiper-slide"><img
+                    src="https://www.reliancedigital.in/medias/iPad-Pro-NPI-Banner-Available-now-27-10-2022.jpg?context=bWFzdGVyfGltYWdlc3wxMDYwNjh8aW1hZ2UvanBlZ3xpbWFnZXMvaDNlL2gyMC85OTEzNjU2NTQxMjE0LmpwZ3wwOTcxYjg0MTc5NDQxNDcwNTRjMzcwNjkxYWJlNGI2NDk3ZjkyYzNhNzM5NWY3NzM0NTRiYjA3ODA1MzRiOWFk"
+                    alt=""></div>
+
+            <div class="swiper-slide"><img
+                    src="https://www.reliancedigital.in/medias/iPad-10th-Gen-NPI-Banner-Available-now-27-10-2022.jpg?context=bWFzdGVyfGltYWdlc3wxMDYzNDB8aW1hZ2UvanBlZ3xpbWFnZXMvaGY2L2hiMS85OTEzNjU2NDEwMTQyLmpwZ3wxNTJiZjhiZDMxYTcyZWJmMGM4MzE4OTdlYjkzOGMwYWMzM2E0Mzk1YWFiNTQzZjdiYmJkOTJlNGQ3Yjk5MDBm"
+                    alt=""></div>
+
+            ...
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+
+    </div>
+
+    <div id="head10">
+        <h3>THE RELIANCE DIGITAL BRAND PROMISE</h3>
+        <div>
             <img src="https://www.reliancedigital.in/medias/iPad-10th-Gen-NPI-Banner-Available-now-27-10-2022.jpg?context=bWFzdGVyfGltYWdlc3wxMDYzNDB8aW1hZ2UvanBlZ3xpbWFnZXMvaGY2L2hiMS85OTEzNjU2NDEwMTQyLmpwZ3wxNTJiZjhiZDMxYTcyZWJmMGM4MzE4OTdlYjkzOGMwYWMzM2E0Mzk1YWFiNTQzZjdiYmJkOTJlNGQ3Yjk5MDBm"
                 alt="">
         </div>
@@ -310,7 +556,7 @@
 
         <div id="head11">
             <h1>UP TO 80% OFF ON PERSONAL CARE APPLIANCES</h1>
-            <div id="dis2">
+            <div id="dis4">
                 <div class="trimImg">
                     <img src="https://www.reliancedigital.in/medias/Best-of-Monitors-Producst-Carousel-27-Personal-care-appliances-02.jpg?context=bWFzdGVyfGltYWdlc3w1MDYxN3xpbWFnZS9qcGVnfGltYWdlcy9oNTcvaDU1Lzk5MjkyMTYxNjM4NzAuanBnfDU2YWUyODU2M2UxNTZiM2ZkZDgyNDBiNDliN2I1YmVkYmQwYWQ1YmMzY2NmOWNhYjQyMDI2ODY1ZGMzYWVkOGQ"
                         alt="">
@@ -356,132 +602,135 @@
                     </div>
                 </div>
             </div>
+            <div>
+                <h2>RXPLORE OUR FRANGE OF PRODUCTS </h2>
 
-            <div id="head12">
-                <h1>UP TO 70% OFF ON EVERYDAY APPLIANCES</h1>
+            </div>
+        </div>
 
-                <div class="gyser">
-                    <img src="https://www.reliancedigital.in/medias/491166983-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w1NTE2OXxpbWFnZS9wbmd8aW1hZ2VzL2gwNC9oYjUvODk2MzkzMzcwMDEyNi5wbmd8MGFjZWY0YzdiMjA5NzY3Y2ExYjg2MTJiZTBhNTE3NDhjYjQ3MmY2NDczNzNjOTU5M2JmODQwOTVjMzA4YjhlNw"
+
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img src="https://www.reliancedigital.in/medias/FOXSKY-TV-CLP-Banner-01-12-2022.jpg?context=bWFzdGVyfGltYWdlc3w4ODExNnxpbWFnZS9qcGVnfGltYWdlcy9oMzIvaDRhLzk5Mjk4MzA0MzI3OTguanBnfDYzN2YxNGQ3MjY1MjZlMmU5MTYyNGM4MzI0NThlYzFmMTViNDZiM2NjMGZmNmYyZmZhNWZmZTRmMDAwMTNmMDk"
                         alt="">
-                    <h3>Oriented Convector HC2004D Fan-based Room Heater with Twin-Fans, Black</h3>
-                    <p>Deal Price: Rs 1,899.00</p>
-                    M.R.P:Rs (3,990.00)
-                    <p>You save 52% (Rs 2,091)</p>
-                    <button>OFFERS AVAILABLE</button>
                 </div>
-                <div>
-                    <img src="https://www.reliancedigital.in/medias/Orient-IWON03VPSM3-Geyser-493620495-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wxNjkyN3xpbWFnZS9qcGVnfGltYWdlcy9oNWUvaDFkLzk4NzY3ODEyNjkwMjIuanBnfDExYWU5MDJjZmNhNTljZDBlOGQ2NGY0NDkzZjg0MDgyNTdlNTkzOTViZjkwMTZlNzlmZTliMjg0ODViZDE5NWU"
-                        alt="">
-                    <h3>Oriented Convector HC2004D Fan-based Room Heater with Twin-Fans, Black</h3>
-                    <p>Deal Price: Rs 1,899.00</p>
-                    M.R.P:Rs (3,990.00)
-                    <p>You save 52% (Rs 2,091)</p>
-                    <button>OFFERS AVAILABLE</button>
+                <div class="https://www.reliancedigital.in/medias/Hisense-TV-CLP-Banner-22-11-2022.jpg?context=bWFzdGVyfGltYWdlc3wxNDYyOTF8aW1hZ2UvanBlZ3xpbWFnZXMvaDVhL2g5OC85OTIzMjUwNzE2NzAyLmpwZ3w1ZmU0YWI3OWYwYTJhN2FjNTgxM2MxOTdjMmU2OWRhYjk1NTZlNDRhMTdhODA3NmViZjZhZTQxYzcyMjQ3NDE3"
+                    alt=""></div>
+                <div class="swiper-slide"><img
+                        src="https://www.reliancedigital.in/medias/LG-OLED-TV-CLP-Banner-28-11-2022.jpg?context=bWFzdGVyfGltYWdlc3wxMDM0Njh8aW1hZ2UvanBlZ3xpbWFnZXMvaDc4L2hmZS85OTI3MzMxMzgxMjc4LmpwZ3w0YzkyY2EwMjQ1MDZkODU5NGQyYTJiYTY1OGUzNWEzNGJiNjc2OTc2NzY5NjU0OTU2NzI3MzY3MWZmMzdmOGY0"
+                        alt=""></div>
+                <div class="swiper-slide"><img
+                        src="https://www.reliancedigital.in/medias/OP-Reliance-Desktop-1365x260.jpg?context=bWFzdGVyfGltYWdlc3wxNTcwNTJ8aW1hZ2UvanBlZ3xpbWFnZXMvaDAwL2hhNy85OTMwOTM0NjgxNjMwLmpwZ3w5NDQzY2FlNzM0MTM2MDEyODI4N2I5MWNlODA3NGQxMzM1YTY2YzdiOWUxODIzOWI0MjBjZDdhYzEwM2Y3MTQz"
+                        alt=""></div>
+                <div class="swiper-slide"><img
+                        src="https://www.reliancedigital.in/medias/FOXSKY-TV-CLP-Banner-01-12-2022.jpg?context=bWFzdGVyfGltYWdlc3w4ODExNnxpbWFnZS9qcGVnfGltYWdlcy9oMzIvaDRhLzk5Mjk4MzA0MzI3OTguanBnfDYzN2YxNGQ3MjY1MjZlMmU5MTYyNGM4MzI0NThlYzFmMTViNDZiM2NjMGZmNmYyZmZhNWZmZTRmMDAwMTNmMDk"
+                        alt=""></div>
+                <div class="swiper-slide"><img
+                        src="https://www.reliancedigital.in/medias/TCL-TV-CLP-Banner-25-11-2022.jpg?context=bWFzdGVyfGltYWdlc3wxNTc0MzF8aW1hZ2UvanBlZ3xpbWFnZXMvaGQxL2hmYi85OTI0MzgxMzExMDA2LmpwZ3w4ZDM0MDFlMTc3Nzg5MWQ3NDI2ZWVlMTJhM2ZiZGJhM2MwNzg4ODg5NzAyNDA4MTdmNDRhNWRmYTg3Njk1NzZj"
+                        alt=""></div>
+                ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
 
-                </div>
-                <div>
-                    <img src="https://www.reliancedigital.in/medias/Lifelong-LLDI09-Irons-492664307-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wyMzA3M3xpbWFnZS9qcGVnfGltYWdlcy9oODkvaDIxLzk4NTM2Nzg1ODM4MzguanBnfDc2NjcxZTI5NjFkMTBiM2EyNDhiZGRmMzkwZDQyMzA0NzI3ZTU4MmEyYTRiODdjODZiN2Q5MmQyZmU1NjAzZGM"
-                        alt="">
-                    <h3>Oriented Convector HC2004D Fan-based Room Heater with Twin-Fans, Black</h3>
-                    <p>Deal Price: Rs 1,899.00</p>
-                    M.R.P:Rs (3,990.00)
-                    <p>You save 52% (Rs 2,091)</p>
-                    <button>OFFERS AVAILABLE</button>
-                </div>
-                <div>
-                    <img src="https://www.reliancedigital.in/medias/PIGEON-Mini-Eco-Speciality-Appliances-492664295-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wyMTgwMnxpbWFnZS9qcGVnfGltYWdlcy9oODYvaDY1Lzk3NTQyMjcyNzc4NTQuanBnfDU4NzljN2IzOWI4YWM2NWVjOTc4ZjNlM2NmYjVhNjc5NGM2NTRmZWY2NmJjMmFjNmY2OTVkYWUwZmRjNzgwN2E"
-                        alt="">
-                    <h3>Oriented Convector HC2004D Fan-based Room Heater with Twin-Fans, Black</h3>
-                    <p>Deal Price: Rs 1,899.00</p>
-                    M.R.P:Rs (3,990.00)
-                    <p>You save 52% (Rs 2,091)</p>
-                    <button>OFFERS AVAILABLE</button>
-                </div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
 
-                <div id="dis4">
-                    <div class="AppImg">
-                        <img src="https://www.reliancedigital.in/medias/Best-Deals-in-Everyday-Appliances-Producst-Carousel-27-10-2022-02.jpg?context=bWFzdGVyfGltYWdlc3wxMDA2MDF8aW1hZ2UvanBlZ3xpbWFnZXMvaGVlL2hmYy85OTEzNzc3MTkyOTkwLmpwZ3xjYzI2MWQ3MmY5MjZhNTcyNzg2ZDQzY2UzZDMzODFjYzBhMDNhMWJiZjBiNWY2ZWQ4OGQ3NDVjODhkMTFlZjUz"
-                            alt="">
-                    </div>
+            <!-- If we need scrollbar -->
 
-                </div>
-            </div>
+        </div>
 
-            <div style="text-align: center;">
-                <button>View All</button>
+        <div style="text-align: center;">
+            <button style="width: 100px; margin-bottom: 20px;">View All></button>
+        </div>
+        <div id="footer"
+            style="display: flex;justify-content:space-between;background-color:#003380;color:white;line-height:30px;font-family:sans-serif;letter-spacing:1px">
+            <div>
+                <ul type="none">
+                    <li><b>PRODUCT CATEGORIES</b></li>
+                    <li>Smartphones</li>
+                    <li>Laptops</li>
+                    <li>DSLR Cameras</li>
+                    <li>Televisions</li>
+                    <li>Air Conditioners</li>
+                    <li>Refrigerators</li>
+                    <li>Kitchen Appliances</li>
+                    <li>Accessories</li>
+                    <li>Personal Care & Grooming</li>
+                </ul>
             </div>
-            <div id="footer" style="display: flex;justify-content:space-between;background-color:#003380;color:white;line-height:30px;font-family:sans-serif;letter-spacing:1px">
-                <div>
-                    <ul type="none">
-                        <li><b>PRODUCT CATEGORIES</b></li>
-                        <li>Smartphones</li>
-                        <li>Laptops</li>
-                        <li>DSLR Cameras</li>
-                        <li>Televisions</li>
-                        <li>Air Conditioners</li>
-                        <li>Refrigerators</li>
-                        <li>Kitchen Appliances</li>
-                        <li>Accessories</li>
-                        <li>Personal Care & Grooming</li>
-                    </ul>
-                </div>
-                <div>
-                    <ul type="none">
-                        <li><b>SITE INFO</b></li>
-                        <li>About Reliance Digital</li>
-                        <li>resQ Services</li>
-                        <li>Site Map</li>
-                        <li>Gifts Cards</li>
-                        <li>Corporate Enquires</li>
-                        <li>Contact Us</li>
-                    </ul>
-                </div>
-                <div>
-                    <ul type="none">
-                        <li><b>RESOURCE CENTRE</b></li>
-                        <li>Product Reviews</li>
-                        <li>Buying Guides</li>
-                        <li>How Tos</li>
-                        <li>Featured Stories</li>
-                        <li>Events & Happenings</li>
-                    </ul>
-                </div>
-                <div>
-                    <ul type="none">
-                        <li><b>POLICIES</b></li>
-                        <li>Terms of Use</li>
-                        <li>FAQs</li>
-                        <li>Cancellation and Return Policy</li>
-                        <li>Pricing and Payments Policy</li>
-                        <li>Shipping and Delivery Policy</li>
-                        <li>Privacy Policy</li>
-                        <li>E-Waste Recycling Policy</li>
-                        <li>EMI and Additional Cashback T&C</li>
-                        <li>RelianceOne Loyalty Program T&C</li>
-                        <li>Caution Notice</li>
-                    </ul>
-                </div>
+            <div>
+                <ul type="none">
+                    <li><b>SITE INFO</b></li>
+                    <li>About Reliance Digital</li>
+                    <li>resQ Services</li>
+                    <li>Site Map</li>
+                    <li>Gifts Cards</li>
+                    <li>Corporate Enquires</li>
+                    <li>Contact Us</li>
+                </ul>
             </div>
-            <div id="follow" style="display: flex;background-color:#003380;color:white;padding:40px">
-                <div>
-                    <h2>FOLLOW US</h2>
-                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEABsbGxscGx4hIR4qLSgtKj04MzM4PV1CR0JHQl2NWGdYWGdYjX2Xe3N7l33gsJycsOD/2c7Z//////////////8BGxsbGxwbHiEhHiotKC0qPTgzMzg9XUJHQkdCXY1YZ1hYZ1iNfZd7c3uXfeCwnJyw4P/Zztn////////////////CABEIAPoA+gMBIgACEQEDEQH/xAAaAAEAAwEBAQAAAAAAAAAAAAAAAQQGBQMC/9oACAEBAAAAAKYAAAABAAAAAJgAAAACYAAAAAmAAAAAJgAAA9vaT5qCUAAA6nY9gq5cTAAAO51gKuXEwAAFnUgKuXEoAAHZ7ICrlxMAABoeiI4nhHxUEoAAGkvCnmQEwAAGkvCjmwEwAAGkvCjmwEwAAvdFe9R5UTx4wmAAHW7gAUc2JgAB1u4AHM4AmAAHW7gAcfiiYAAdTtPuRHmcTmiUAADSXhRzYCYAADSXhRzYCUAADSXhRzYCUAADSXhRzYCYAADSXhRzYCUAADSXhRzYCYAADSXhRzYCYAADSXhRzYCUAADSXhRzYCYAADSXhRzYCUAADSXhRzYCYAADSXhRzYCQAAaO8KWbAfX/xAAYAQEBAQEBAAAAAAAAAAAAAAAAAwIBBP/aAAoCAhADEAAAAPXEAAAAAAAAAAAAADnRzoAAAjuWwvimAAAM981QLYrgAACeoUK4pnvOgAAJ6hQvOmQAACFMd507zq2N5AADz0xoA9E95AACesanopnXKZ7wAACeoULzpkAAAJ6hQvOmQAAAnqFC86ZAAACeoULzpkAAAJ6hQvOmQAAAnqFC86ZA/8QALxAAAQIDBgQFBAMAAAAAAAAAAgEDBAU0ACBAcXKxERVTkhMwM1FSEjJhgSIxcP/aAAgBAQABPwD/ADUYeIP7WTX9WSAjOjtbl8Z0k7kty+M6SdyW5fGdJO5LHBRLYEZtogp+cTDywz4E8qgnxs1DsM+m2I3o2kf04iXQiCiPuJ/Jfs8iNpH9OHhGUfiGwX7f7LJPJjaR/Th5SHrOZD5MbSP6cPK6XMyuqqCiqq8EROKrZ2aucVRoBRLcyjOonaluYxnUTtSzkdEugQGaKJfhMPLaNvMrsevCDd/SYuXUbeZb3ZjRuahxcuo28y3uzGjc1DiIGGbiTcQ1JPpFLcqh/m5blUP83LMMiw0LYqvBLr7Ivtq2SrwX2tyqH+bluVQ/zctyqH+bloiXsMsOOIR8RTCSj1H9A+ZMl4Qh6hwko9R/QPmTUuDDY+7mElHqP6B8ybrTjqwkqMQce+okHiCW8Znqt9yW8Znqt9yWEhJOIqip7pdIhFOJKiJ7rbxmeq33Jbxmeq33Jbxmeq33JaZuCbzf0kiogYeXUbeZb3ZjRuahxcuo28y3uzGjc1Di5dRt5lvdmNG5qHFy6jbzLe7MaNzUOLl1G3mW92Y0bmocXLqNvMt7sxo3NQ4uXUbeZb3ZjRuahxcuo28y3uzGjc1Di5dRt5lvdmNG5qHFy6jbzLe7MaNzUOLl1G3mW92Y0bmocXLqNvMt7sxo3NQ4uXUjeZb3ZjRuah8r/8QAJBEAAQIFBQADAQAAAAAAAAAAAQIDABAwMoEREiAxURNBUHH/2gAIAQIBAT8A/L3J9Ebk+iAQeqi3PocGuj/aajok8WujTctzNtIOpMbU+CAAOqbtuZt25qLUoKOhgqJ7MwojoxvV6YbJIOtJy48m7RSU3uOusKRtHc0o3DuPiHsAaACm7bmbduartuZt25qu25m3bmq7bmbduartuZt25qu25m1bnj//xAAfEQABBAMBAAMAAAAAAAAAAAACARAwMQARUSASUGH/2gAIAQMBAT8A+r0vM0vJUHvg7jS/J3GNuS5teyDblcgoms0j6TNJzCuIa9FcSFrELbqWs+f5ixjblco25XKFuVyjblco25XKNuV+f//Z" width="50px">
-                    <img src="https://www.bing.com/th?id=OIP.P3GJZi8Z-DGPx1JS3u5yOgHaGl&w=265&h=235&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" width="50px">
-                    <img src="https://www.bing.com/th?id=OIP.EEkwdiwS4dyrbLDQsVDLkgHaHQ&w=252&h=247&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" width="50px">
-                </div>
-                <div style="margin-left:200px">
-                    <h2>EXPERIENCE RELIANCE DIGITAL APP ON MOBILE</h2>
-                    <img src="https://www.reliancedigital.in/build/client/images/google_play_store.png" width="150px">
-                    <img src="https://www.reliancedigital.in/build/client/images/ios_app_store_icon.png" width="150px">
-                </div>
+            <div>
+                <ul type="none">
+                    <li><b>RESOURCE CENTRE</b></li>
+                    <li>Product Reviews</li>
+                    <li>Buying Guides</li>
+                    <li>How Tos</li>
+                    <li>Featured Stories</li>
+                    <li>Events & Happenings</li>
+                </ul>
             </div>
-            <div style="text-align: center;background-color:#0a244a;color:white;padding:28px;font-family:sans-serif">
-                <h2><u>Disclaimer</u></h2>
-                <p>Product prices, offers and availability are subject to change from time to time. All prices are inclusive of taxes. Product colours & images are only for illustration and they may not exactly match with the actual product. Product specs are subject to change & may vary from actual product. While every care is taken to avoid inaccuracies in content, these are provided as is, without warranty of any kind.</p>
+            <div>
+                <ul type="none">
+                    <li><b>POLICIES</b></li>
+                    <li>Terms of Use</li>
+                    <li>FAQs</li>
+                    <li>Cancellation and Return Policy</li>
+                    <li>Pricing and Payments Policy</li>
+                    <li>Shipping and Delivery Policy</li>
+                    <li>Privacy Policy</li>
+                    <li>E-Waste Recycling Policy</li>
+                    <li>EMI and Additional Cashback T&C</li>
+                    <li>RelianceOne Loyalty Program T&C</li>
+                    <li>Caution Notice</li>
+                </ul>
             </div>
-        
+        </div>
+        <div id="follow" style="display: flex;background-color:#003380;color:white;padding:40px">
+            <div>
+                <h2>FOLLOW US</h2>
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEABsbGxscGx4hIR4qLSgtKj04MzM4PV1CR0JHQl2NWGdYWGdYjX2Xe3N7l33gsJycsOD/2c7Z//////////////8BGxsbGxwbHiEhHiotKC0qPTgzMzg9XUJHQkdCXY1YZ1hYZ1iNfZd7c3uXfeCwnJyw4P/Zztn////////////////CABEIAPoA+gMBIgACEQEDEQH/xAAaAAEAAwEBAQAAAAAAAAAAAAAAAQQGBQMC/9oACAEBAAAAAKYAAAABAAAAAJgAAAACYAAAAAmAAAAAJgAAA9vaT5qCUAAA6nY9gq5cTAAAO51gKuXEwAAFnUgKuXEoAAHZ7ICrlxMAABoeiI4nhHxUEoAAGkvCnmQEwAAGkvCjmwEwAAGkvCjmwEwAAvdFe9R5UTx4wmAAHW7gAUc2JgAB1u4AHM4AmAAHW7gAcfiiYAAdTtPuRHmcTmiUAADSXhRzYCYAADSXhRzYCUAADSXhRzYCUAADSXhRzYCYAADSXhRzYCUAADSXhRzYCYAADSXhRzYCYAADSXhRzYCUAADSXhRzYCYAADSXhRzYCUAADSXhRzYCYAADSXhRzYCQAAaO8KWbAfX/xAAYAQEBAQEBAAAAAAAAAAAAAAAAAwIBBP/aAAoCAhADEAAAAPXEAAAAAAAAAAAAADnRzoAAAjuWwvimAAAM981QLYrgAACeoUK4pnvOgAAJ6hQvOmQAACFMd507zq2N5AADz0xoA9E95AACesanopnXKZ7wAACeoULzpkAAAJ6hQvOmQAAAnqFC86ZAAACeoULzpkAAAJ6hQvOmQAAAnqFC86ZA/8QALxAAAQIDBgQFBAMAAAAAAAAAAgEDBAU0ACBAcXKxERVTkhMwM1FSEjJhgSIxcP/aAAgBAQABPwD/ADUYeIP7WTX9WSAjOjtbl8Z0k7kty+M6SdyW5fGdJO5LHBRLYEZtogp+cTDywz4E8qgnxs1DsM+m2I3o2kf04iXQiCiPuJ/Jfs8iNpH9OHhGUfiGwX7f7LJPJjaR/Th5SHrOZD5MbSP6cPK6XMyuqqCiqq8EROKrZ2aucVRoBRLcyjOonaluYxnUTtSzkdEugQGaKJfhMPLaNvMrsevCDd/SYuXUbeZb3ZjRuahxcuo28y3uzGjc1DiIGGbiTcQ1JPpFLcqh/m5blUP83LMMiw0LYqvBLr7Ivtq2SrwX2tyqH+bluVQ/zctyqH+bloiXsMsOOIR8RTCSj1H9A+ZMl4Qh6hwko9R/QPmTUuDDY+7mElHqP6B8ybrTjqwkqMQce+okHiCW8Znqt9yW8Znqt9yWEhJOIqip7pdIhFOJKiJ7rbxmeq33Jbxmeq33Jbxmeq33JaZuCbzf0kiogYeXUbeZb3ZjRuahxcuo28y3uzGjc1Di5dRt5lvdmNG5qHFy6jbzLe7MaNzUOLl1G3mW92Y0bmocXLqNvMt7sxo3NQ4uXUbeZb3ZjRuahxcuo28y3uzGjc1Di5dRt5lvdmNG5qHFy6jbzLe7MaNzUOLl1G3mW92Y0bmocXLqNvMt7sxo3NQ4uXUjeZb3ZjRuah8r/8QAJBEAAQIFBQADAQAAAAAAAAAAAQIDABAwMoEREiAxURNBUHH/2gAIAQIBAT8A/L3J9Ebk+iAQeqi3PocGuj/aajok8WujTctzNtIOpMbU+CAAOqbtuZt25qLUoKOhgqJ7MwojoxvV6YbJIOtJy48m7RSU3uOusKRtHc0o3DuPiHsAaACm7bmbduartuZt25qu25m3bmq7bmbduartuZt25qu25m1bnj//xAAfEQABBAMBAAMAAAAAAAAAAAACARAwMQARUSASUGH/2gAIAQMBAT8A+r0vM0vJUHvg7jS/J3GNuS5teyDblcgoms0j6TNJzCuIa9FcSFrELbqWs+f5ixjblco25XKFuVyjblco25XKNuV+f//Z"
+                    width="50px">
+                <img src="https://www.bing.com/th?id=OIP.P3GJZi8Z-DGPx1JS3u5yOgHaGl&w=265&h=235&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2"
+                    width="50px">
+                <img src="https://www.bing.com/th?id=OIP.EEkwdiwS4dyrbLDQsVDLkgHaHQ&w=252&h=247&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2"
+                    width="50px">
+            </div>
+            <div style="margin-left:200px">
+                <h2>EXPERIENCE RELIANCE DIGITAL APP ON MOBILE</h2>
+                <img src="https://www.reliancedigital.in/build/client/images/google_play_store.png" width="150px">
+                <img src="https://www.reliancedigital.in/build/client/images/ios_app_store_icon.png" width="150px">
+            </div>
+        </div>
+        <div style="text-align: center;background-color:#0a244a;color:white;padding:28px;font-family:sans-serif">
+            <h2><u>Disclaimer</u></h2>
+            <p>Product prices, offers and availability are subject to change from time to time. All prices are inclusive
+                of taxes. Product colours & images are only for illustration and they may not exactly match with the
+                actual product. Product specs are subject to change & may vary from actual product. While every care is
+                taken to avoid inaccuracies in content, these are provided as is, without warranty of any kind.</p>
+        </div>
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </body>
 
 <script src="./index.js"></script>
+
 
 </html>

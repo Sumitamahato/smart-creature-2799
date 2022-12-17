@@ -116,7 +116,7 @@ button{
     background-color: rgba(127, 221, 255, 0.859);
     border: none
 }
-.Trimmer {
+.Trimmer{
     display: grid;
     grid-template-columns: repeat(4, 200px);
     gap: 20px;
@@ -157,4 +157,4 @@ button{
 .navSale:hover .navBarPro {
     display: block;
     color: black;
-        }
+   }

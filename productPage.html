@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+
+    <style>
+        #container {
+            display: grid;
+            grid-template-columns: repeat(4, 300px);
+        }
+
+        .card {
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .card:hover {
+            zoom: 110%;
+        }
+
+        #head1 {
+            display: flex;
+            justify-content: end;
+            gap: 20px;
+            color: white;
+            /* background-color: red; */
+            background-color: #e42529;
+        }
+
+        #head2 {
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            /* background-color: red; */
+            background-color: #e42529;
+            padding: 20px;
+        }
+
+        #head2>div {
+            display: flex;
+            gap: 20px
+        }
+
+        #head3>ul {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            color: white;
+        }
+
+        #head3 {
+            background-color: blue;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div id="container"></div> -->
+
+    <body>
+        <div id="head1">
+            <h3><i class="fa fa-map-marker" aria-hidden="true"></i>Find a store</h3>
+            <h3>Buying guides</h3>
+            <h3>Contact Us</h3>
+        </div>
+        <div id="head2">
+            <img src="https://www.reliancedigital.in/build/client/images/loaders/rd_logo.svg">
+            <input type="text" id="search-bar" placeholder="Find your favorite products">
+            <h3>Select your PIN Code</h3>
+            <h3><i class="fa fa-shopping-cart header__maininfo__list__item__icon" aria-hidden="true"></i>Cart</h3>
+            <h3><i class="fa fa-user header__maininfo__list__item__icon" aria-hidden="true"></i>Login</h3>
+        </div>
+        <div id="head3">
+            <ul type="none">
+                <!-- <li><i class="fa fa-angle-down ml__4">MOBILES & TABLET</i></li> -->
+                <li>MOBILES & TABLET</li>
+                <li>TELEVISIONS</li>
+                <li>AUDIO</li>
+                <li>HOME APPLIANCES</li>
+                <li>COMPUTERS</li>
+                <li>CAMERAS</li>
+                <li>KITCHEN APPLIANCES</li>
+                <li>PERSONAL CARE</li>
+            </ul>
+        </div>
+        <div id="container">
+    </body>
+    <script>
+        let container = document.getElementById("container");
+
+        fetch("https://639b343431877e43d685bec6.mockapi.io/new-products")
+            .then((responseData) => {
+                return responseData.json();
+            })
+            .then((actualData) => {
+                products(actualData);
+                console.log(actualData)
+            })
+
+
+        function products(data) {
+            data.forEach((element, index) => {
+                let card = document.createElement("div");
+                card.setAttribute("class", "card");
+                let image = document.createElement("img");
+                image.setAttribute("src", element.avatar)
+                image.style.width = "200px"
+                let title = document.createElement("h3");
+                title.innerText = element.title
+                let price = document.createElement("h3");
+                price.innerText = "Price: " + element.price
+                let addToCart = document.createElement("button");
+                addToCart.setAttribute("id", "btn");
+                addToCart.innerText = "ADD TO CART"
+
+                addToCart.addEventListener("click", () => {
+                    addCart(element)
+                })
+                card.append(image, title, price, addToCart);
+                container.append(card)
+            })
+        }
+        function addCart(element) {
+            let cartItems = JSON.parse(localStorage.getItem("cart-items")) || [];
+            cartItems.push(element);
+            localStorage.setItem("cart-items", JSON.stringify(cartItems))
+        }
+    </script>
+
+</html>

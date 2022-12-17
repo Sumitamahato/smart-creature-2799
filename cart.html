@@ -5,9 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
-    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    
 </head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 <body>
     
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <img src="https://www.reliancedigital.in/medias/iPhone14-Buy-now-CLP-Banner-15-09-2022.jpg?context=bWFzdGVyfGltYWdlc3w5OTQ1MHxpbWFnZS9qcGVnfGltYWdlcy9oMTYvaGM1Lzk5MDk3NTM2NzU4MDYuanBnfDNjOWU0YWU0ODQ3MDNkOWQ4Y2Y5MDg4NWFkYjM2ZDkwZjViZTZhYWUyMDlkZTVhZjk0OGI4Y2MxOGU1NGYzZDQ"
+                    alt="">
+            </div>
+            <div class="https://www.reliancedigital.in/medias/Redmi-Smartphones-CLP-Banner-22-11-2022.jpg?context=bWFzdGVyfGltYWdlc3wxNjg1MjN8aW1hZ2UvanBlZ3xpbWFnZXMvaDg5L2gxOS85OTI2Mzk5MzkzODIyLmpwZ3wzOWNiZTEyMzJlMzM3ZDIyYzdjYWE4ODMzY2QyNmI0NjFhMGRkYTc1ZmIzZjY1NGU0NDZhZDUzOTAzZjkwYjY5"
+                alt=""></div>
+            <div class="swiper-slide"><img
+                    src="https://www.reliancedigital.in/medias/Samsung-M13-5G-CLP-Banner-22-11-2022.jpg?context=bWFzdGVyfGltYWdlc3wxNjY2Mzh8aW1hZ2UvanBlZ3xpbWFnZXMvaGIyL2hjNi85OTI5ODExNzIyMjcwLmpwZ3w2OWYzNmQ4MmJkNmQ1YWZhOGUzNWMyNGYyNzMxNWE0YmI4YWEwZTMyM2YyZmNiYTEwNjJlMDQzYzVlNWQ3ZmFh"
+                    alt=""></div>
+            <div class="swiper-slide"><img
+                    src="https://www.reliancedigital.in/medias/Motorola-G71-CLP-Banner-22-11-2022.jpg?context=bWFzdGVyfGltYWdlc3wxNDkwOTV8aW1hZ2UvanBlZ3xpbWFnZXMvaGNjL2hlYS85OTI2MzkyOTcxMjk0LmpwZ3xiNDczZTM2YTMwZGI3YzFhZWRhNzQxYmZhYzQ0MmJjOTYxNzViNjcwOTQwMDM2NjkxZWUxNTZiMDkxZDZmZTgz"
+                    alt=""></div>
+            <div class="swiper-slide"><img
+                    src="https://www.reliancedigital.in/medias/Realme-C-Series-CLP-Banner-22-11-2022.jpg?context=bWFzdGVyfGltYWdlc3wxNjY1OTR8aW1hZ2UvanBlZ3xpbWFnZXMvaDkzL2hlYi85OTIzOTA0MTc2MTU4LmpwZ3xmODEzNDkwMTE0NDUwYTRhMjFiMzcyYmM5OWU0NGRhMTdhZGU1YzBiMzg2NzhjYjQwMGU4YTIwN2Y5MTM3Nzk5"
+                    alt=""></div>
+            ...
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </body>
+<script>
+const swiper = new Swiper('.swiper', {
+    // Optional parameters\
+    autoplay :{
+        delay:3000,
+        disableOnInteraction:false,
+    },
+
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable:true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+  });
+
+  </script>
 </html>

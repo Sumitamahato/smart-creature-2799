@@ -24,6 +24,17 @@
             display: block;
             width: 1100px;
         }
+        #head3>ul {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            color: white;
+        }
+
+        #head3 {
+            background-color: #003380;
+            padding: 10px;
+            font-family: 'Times New Roman', Times, serif;
+        }
     </style>
     </style>
 </head>
@@ -40,11 +51,22 @@
             <input type="text" id="search-bar" placeholder="Find your favorite products">
             <h3>Select your PIN Code</h3>
             <h3><i class="fa fa-shopping-cart header__maininfo__list__item__icon" aria-hidden="true"></i>Cart</h3>
-            <h3><i class="fa fa-duotone fa-cart-shopping" aria-hidden="true"></i>Login</h3>
+            <h3><i class="fa fa-user header__maininfo__list__item__icon" aria-hidden="true"></i>Login</h3>
         </div>
-
+        <div id="head3">
+            <ul type="none">
+                <li>MOBILES & TABLETS</li>
+                <li>TELEVISIONS</li>
+                <li>AUDIO</li>
+                <li>HOME APPLIANCES</li>
+                <li>COMPUTERS</li>
+                <li>CAMERAS</li>
+                <li>KITCHEN APPLIANCES</li>
+                <li>PERSONAL CARE</li>
+            </ul>
+        </div>
     </div>
-    <div id="nav">
+    <!-- <div id="nav">
         <div id="navBar" style="display: flex;justify-content: space-between; ">
             <div class="navigation navSale">Dresses
                 <div class="navBarPro" style="width:1100px"></div>
@@ -283,11 +305,29 @@
                 </div>
             </div>
         </div>
-        </div>
-    <div id="head4">
-        <img
-            src="https://www.reliancedigital.in/medias/Year-End-Sale-5000-Instant-Discount-Carousel-Banner-05-12-2022.jpg?context=bWFzdGVyfGltYWdlc3wxNDcwODh8aW1hZ2UvanBlZ3xpbWFnZXMvaDkzL2hiNS85OTI4MTY1NTg5MDIyLmpwZ3w4NDk3ZDFhZTM1YzUxYTg3MDFiMWZkZjhmMGE0ZWI2ZWZmYjU0MWNmOGJkMTAzZTYwMTdlNjI5MGNjYzZiOTIx">
-    </div>
+        </div>
+ -->
+
+
+
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img src="https://www.reliancedigital.in/medias/Year-End-Sale-5000-Instant-Discount-Carousel-Banner-05-12-2022.jpg?context=bWFzdGVyfGltYWdlc3wxNDcwODh8aW1hZ2UvanBlZ3xpbWFnZXMvaDkzL2hiNS85OTI4MTY1NTg5MDIyLmpwZ3w4NDk3ZDFhZTM1YzUxYTg3MDFiMWZkZjhmMGE0ZWI2ZWZmYjU0MWNmOGJkMTAzZTYwMTdlNjI5MGNjYzZiOTIx"
+                        alt="">
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+            
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+            
+                    <!-- If we need scrollbar -->
+            
+                </div>
 
 
     <!-- <div class="carousel" data-flickity='{"autoPlay": true}'>

@@ -4,65 +4,131 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart</title>
-    
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+    <style>
+        #parent{
+            margin-top: 60px;
+        }
+        #main-box{
+            display: flex;
+           width: 500px;
+           margin: auto;
+          margin-bottom: 20px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+        }
+        #image-box img{
+            width: 200px;
+            border-right: 1px solid grey;
+        }
+        #box-div{
+        text-align: center;
+        width: 400px;
+        }
+      #buy{
+            background-image: linear-gradient(to right, #007991 0%, #78ffd6  51%, #007991  100%);
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+          }
+#buy:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+
+        
+    </style>
 </head>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 <body>
-    
-    <div class="swiper">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
-                <img src="https://www.reliancedigital.in/medias/iPhone14-Buy-now-CLP-Banner-15-09-2022.jpg?context=bWFzdGVyfGltYWdlc3w5OTQ1MHxpbWFnZS9qcGVnfGltYWdlcy9oMTYvaGM1Lzk5MDk3NTM2NzU4MDYuanBnfDNjOWU0YWU0ODQ3MDNkOWQ4Y2Y5MDg4NWFkYjM2ZDkwZjViZTZhYWUyMDlkZTVhZjk0OGI4Y2MxOGU1NGYzZDQ"
-                    alt="">
-            </div>
-            <div class="https://www.reliancedigital.in/medias/Redmi-Smartphones-CLP-Banner-22-11-2022.jpg?context=bWFzdGVyfGltYWdlc3wxNjg1MjN8aW1hZ2UvanBlZ3xpbWFnZXMvaDg5L2gxOS85OTI2Mzk5MzkzODIyLmpwZ3wzOWNiZTEyMzJlMzM3ZDIyYzdjYWE4ODMzY2QyNmI0NjFhMGRkYTc1ZmIzZjY1NGU0NDZhZDUzOTAzZjkwYjY5"
-                alt=""></div>
-            <div class="swiper-slide"><img
-                    src="https://www.reliancedigital.in/medias/Samsung-M13-5G-CLP-Banner-22-11-2022.jpg?context=bWFzdGVyfGltYWdlc3wxNjY2Mzh8aW1hZ2UvanBlZ3xpbWFnZXMvaGIyL2hjNi85OTI5ODExNzIyMjcwLmpwZ3w2OWYzNmQ4MmJkNmQ1YWZhOGUzNWMyNGYyNzMxNWE0YmI4YWEwZTMyM2YyZmNiYTEwNjJlMDQzYzVlNWQ3ZmFh"
-                    alt=""></div>
-            <div class="swiper-slide"><img
-                    src="https://www.reliancedigital.in/medias/Motorola-G71-CLP-Banner-22-11-2022.jpg?context=bWFzdGVyfGltYWdlc3wxNDkwOTV8aW1hZ2UvanBlZ3xpbWFnZXMvaGNjL2hlYS85OTI2MzkyOTcxMjk0LmpwZ3xiNDczZTM2YTMwZGI3YzFhZWRhNzQxYmZhYzQ0MmJjOTYxNzViNjcwOTQwMDM2NjkxZWUxNTZiMDkxZDZmZTgz"
-                    alt=""></div>
-            <div class="swiper-slide"><img
-                    src="https://www.reliancedigital.in/medias/Realme-C-Series-CLP-Banner-22-11-2022.jpg?context=bWFzdGVyfGltYWdlc3wxNjY1OTR8aW1hZ2UvanBlZ3xpbWFnZXMvaDkzL2hlYi85OTIzOTA0MTc2MTU4LmpwZ3xmODEzNDkwMTE0NDUwYTRhMjFiMzcyYmM5OWU0NGRhMTdhZGU1YzBiMzg2NzhjYjQwMGU4YTIwN2Y5MTM3Nzk5"
-                    alt=""></div>
-            ...
+    <div id="container" >
+        <div id="head1">
+            <h3><i class="fa fa-map-marker" aria-hidden="true"></i>Find a store</h3>
+            <h3>Buying guides</h3>
+            <h3>Contact Us</h3>
         </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-
-        <!-- If we need scrollbar -->
+    
+        <div id="head2">
+            <img src="./supermart.img.png" width="100px">
+            <input type="text" id="search-bar" placeholder="Find your favorite products">
+            <h3>Select your PIN Code</h3>
+            <h3 onclick="ok">
+                <a href="./cart.html"><i class="fa fa-shopping-cart header__maininfo__list__item__icon " aria-hidden="true"></i></a>Cart</h3>
+            <h3><i class="fa fa-user header__maininfo__list__item__icon" aria-hidden="true"></i>Login</h3>
+        </div>
+        <div id="head3">
+            <ul type="none">
+                <li>MOBILES & TABLETS</li>
+                <li>TELEVISIONS</li>
+                <li>AUDIO</li>
+                <li>HOME APPLIANCES</li>
+                <li>COMPUTERS</li>
+                <li>CAMERAS</li>
+                <li>KITCHEN APPLIANCES</li>
+                <li>PERSONAL CARE</li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    <h2>Total amount to be paid is Rs.<span id="totalPrice"></span></h2>
+    <div id="parent">
 
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    
 </body>
-<script>
-const swiper = new Swiper('.swiper', {
-    // Optional parameters\
-    autoplay :{
-        delay:3000,
-        disableOnInteraction:false,
-    },
-
-    loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable:true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  
-  });
-
-  </script>
 </html>
+<script>
+    
+    let totalPrice = document.getElementById("totalPrice")
+    let page=document.getElementById("parent")
+    let sum = 0;
+    let cartItems=JSON.parse(localStorage.getItem("cart-items"))||[];
+    function display(data){
+        data.forEach(element => {
+            let box_div=document.createElement("div")
+            box_div.id="box-div"
+            let image_box=document.createElement("div")
+            image_box.id="image-box"
+            let main_box=document.createElement("div")
+            main_box.id="main-box"
+            let image=document.createElement("img")
+            image.setAttribute("src",element.avatar)
+            let name=document.createElement("h2")
+            name.innerText=element.title
+            let price=document.createElement("p")
+            price.innerText="Rs"+" "+element.price
+            totalPrice.innerText = sum+=element.price
+            let btn=document.createElement("button")
+            btn.id="buy"
+            btn.innerText="Buy Now"
+            let btn1=document.createElement("button")
+            btn1.id="delete"
+            btn1.innerText="Delete"
+            btn1.addEventListener("click",()=>{
+            cartItems.splice(index,1);
+                localStorage.setItem("cart-list",JSON.stringify(data));
+                display(cartItems)
+            })
+            image_box.append(image)
+            box_div.append(name,price,btn,btn1)
+            main_box.append(image_box,box_div)
+
+            page.append(main_box)
+
+            
+        });
+    } 
+
+    display(cartItems)
+    function mainpage(){
+        window.location.href="index.html"
+    }
+        
+    
+</script>

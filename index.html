@@ -14,7 +14,7 @@
         .insideData {
             display: none;
             position: absolute;
-            background-color: blue;
+             background-color: blue; 
             padding: 40px;
             color: white;
             font-family: serif
@@ -31,9 +31,13 @@
         }
 
         #head3 {
-            background-color: #003380;
+            /* background-color: #003380; */
+            background-color: rgb(165, 81, 42);
             padding: 10px;
             font-family: 'Times New Roman', Times, serif;
+        }
+        a{
+            color: white;
         }
     </style>
     </style>
@@ -47,10 +51,11 @@
             <h3>Contact Us</h3>
         </div>
         <div id="head2">
-            <img src="https://www.reliancedigital.in/build/client/images/loaders/rd_logo.svg">
+            <img src="./supermart.img.png" width="100px">
             <input type="text" id="search-bar" placeholder="Find your favorite products">
             <h3>Select your PIN Code</h3>
-            <h3><i class="fa fa-shopping-cart header__maininfo__list__item__icon" aria-hidden="true"></i>Cart</h3>
+            <h3 onclick="ok">
+                <a href="./cart.html"><i class="fa fa-shopping-cart header__maininfo__list__item__icon " aria-hidden="true"></i></a>Cart</h3>
             <h3><i class="fa fa-user header__maininfo__list__item__icon" aria-hidden="true"></i>Login</h3>
         </div>
         <div id="head3">
@@ -576,24 +581,6 @@
             <img src="https://www.reliancedigital.in/medias/iPad-10th-Gen-NPI-Banner-Available-now-27-10-2022.jpg?context=bWFzdGVyfGltYWdlc3wxMDYzNDB8aW1hZ2UvanBlZ3xpbWFnZXMvaGY2L2hiMS85OTEzNjU2NDEwMTQyLmpwZ3wxNTJiZjhiZDMxYTcyZWJmMGM4MzE4OTdlYjkzOGMwYWMzM2E0Mzk1YWFiNTQzZjdiYmJkOTJlNGQ3Yjk5MDBm"
                 alt="">
         </div>
-
-        <div>
-            <img src="https://www.reliancedigital.in/medias/Insta-Delivery-Brand-Promise-Icon.png?context=bWFzdGVyfGltYWdlc3wxNTM3fGltYWdlL3BuZ3xpbWFnZXMvaGI2L2gwNS85NDQ3MTcwMzQyOTQyLnBuZ3w2Yzc1ZmY1ZjYwOWIyNWU0ZTgwMjFlYmRkMTU5ZTgzMGI4ZDNmZTE2NjVjYmRlMmUwMmRiODI2OTExNWM5ZTdk"
-                alt="">
-        </div>
-        <div>
-            <img src="https://www.reliancedigital.in/medias/Best-Finance-Options-2.png?context=bWFzdGVyfGltYWdlc3wxMjM4fGltYWdlL3BuZ3xpbWFnZXMvaDJmL2gxOS85NDQ3MTcwNDA4NDc4LnBuZ3xlMDBiNjY4YWI5YzMzYjZkZDhlZTMyMDhjYjE2YzI2OTY2NWJhYjk2M2VkNzdjZDg3NTNlMGEyMTA1ZjFlODZh"
-                alt="">
-        </div>
-        <div>
-            <img src="https://www.reliancedigital.in/medias/service-img.png?context=bWFzdGVyfGltYWdlc3w5MTB8aW1hZ2UvcG5nfGltYWdlcy9oMDYvaGEzLzkwOTA3OTc5OTQwMTQucG5nfGJjZmJhNzM1ODdkYTQ5ODI3YzNiMzQ1ZTdlM2JjNjUwMTBjM2E3YWFjNmUxZjdmMmEyOGRjZDMxOGI4ZWE0MWY"
-                alt="">
-        </div>
-        <div>
-            <img src="https://www.reliancedigital.in/medias/unmatched-network-img.png?context=bWFzdGVyfGltYWdlc3w3NDV8aW1hZ2UvcG5nfGltYWdlcy9oODIvaDJhLzkwOTA3OTgwNTk1NTAucG5nfDFmMThjYzdiYTNiOTgxYjA5YzdlZTFiMmQyODI5MGY2NTM4ZTcxOWZkZTA1ZjAzY2Q1ZTk5YjQ1NTMxMWViYzU"
-                alt="">
-        </div>
-
         <div id="head11">
             <h1>UP TO 80% OFF ON PERSONAL CARE APPLIANCES</h1>
             <div id="dis4">
@@ -685,7 +672,7 @@
         </div>
 
         <div style="text-align: center;">
-            <button style="width: 100px; margin-bottom: 20px;">View All></button>
+           <a href="product.html"><button id = "View">View All></button></a>
         </div>
         <div id="footer"
             style="display: flex;justify-content:space-between;background-color:#003380;color:white;line-height:30px;font-family:sans-serif;letter-spacing:1px">
@@ -770,7 +757,8 @@
         <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </body>
 
-<script src="./index.js"></script>
+
 
 
 </html>
+<script src="./index.js"></script>

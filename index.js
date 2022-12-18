@@ -30,6 +30,13 @@ function hidelist(){
 }
 
 
+function ok() {
+ 
+  window.location.href="cart.html"
+  
+}
+console.log("abcd")
+
 
 
 

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        .Login{
+        border:1px solid #457eff;
+        color:#457eff;
+        border-radius: 40px;
+        font-weight:300;
+        letter-spacing: 1px;
+    }
+    .Login:hover{
+        background-color: rgb(236, 236, 236);
+    }
+    </style>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./Registration.css">
+
+
+</head>
+
+<body>
+    <div id="main-section">
+        <form action="">
+            <h1>LOGIN</h1>
+            <span id="cross"><i class="fa-solid fa-xmark"></i></span>
+          
+            <div class="form-control">
+                <label for="">Email-id / user name</label>
+                <input type="text"placeholder="Enter your active Email ID /username">
+                <!-- <p>We'll send you relevant jobs in your mail</p> -->
+            </div>
+            <div class="form-control">
+                <label for="">Password:</label>
+                <input type="text"placeholder="Enter Your Password">
+                <a href="">Forget Password ?</a>
+            </div>
+          
+            <div class="otp">
+                <a href="">Use OTP to Login</a>
+            </div>
+            <a href="./index.html"><button>LOGIN</button></a>
+            <div class="google">
+              <span><i class="fa-brands fa-google"></i></span> 
+              <p>Sign in with Google</p>
+            </div>
+        </form>
+
+    </div>
+    <script>
+const X =document.querySelector("#cross");
+console.log(X)
+X.addEventListener("click",()=>{
+    history. back()
+})
+    </script>
+</body>
+</html>

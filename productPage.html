@@ -56,6 +56,23 @@
             background-color: blue;
             padding: 10px;
         }
+        #btn{
+            background-image: linear-gradient(to right, #007991 0%, #78ffd6  51%, #007991  100%);
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+          }
+         #btn:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
     </style>
 </head>
 
@@ -88,22 +105,39 @@
                 <li>PERSONAL CARE</li>
             </ul>
         </div>
-        <div id="container">
+        <div id="container"></div>
+            
     </body>
     <script>
-        let container = document.getElementById("container");
+     let container = document.getElementById("container");
+    //     let filterSelect=document.getElementById("filter");
+    //     let fetchedData=[];
+    //     filterSelect.addEventListener("change",() =>{
+    //     let filtered =fetchedData.filter((element)=>{
+    //            if(element.category===filterSelect.value){
+    //             return true;
+    //            } else{
+    //             return false;
+    //            }
+            
+    //     })
+    //     //console.log(filtered)
+    //    Products(filtered);
+    //     })
 
         fetch("https://639b343431877e43d685bec6.mockapi.io/new-products")
             .then((responseData) => {
                 return responseData.json();
             })
             .then((actualData) => {
+                fetchedData=actualData.data;
                 products(actualData);
                 console.log(actualData)
             })
 
 
         function products(data) {
+            // container.innerHTML=null;
             data.forEach((element, index) => {
                 let card = document.createElement("div");
                 card.setAttribute("class", "card");
@@ -129,7 +163,9 @@
             let cartItems = JSON.parse(localStorage.getItem("cart-items")) || [];
             cartItems.push(element);
             localStorage.setItem("cart-items", JSON.stringify(cartItems))
+            window.location.href="cart.html"
         }
+        
     </script>
 
 </html>

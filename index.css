@@ -4,7 +4,8 @@
     gap: 20px;
     color: white;
     /* background-color: red; */
-    background-color: #e42529;
+    /* background-color: #e42529; */
+    background-color: #25aee4;
 }
 
 #head2 {
@@ -12,7 +13,7 @@
     justify-content: space-between;
     color: white;
     /* background-color: red; */
-    background-color: #e42529;
+    background-color: #25aee4;
     padding: 20px;
 }
 
@@ -109,13 +110,27 @@
 }
 
 
-
-button{
-    border-radius: 10px;
-    /* height: 10px; */
-    background-color: rgba(127, 221, 255, 0.859);
-    border: none
+  #View {
+    width: max-content;
+    margin-bottom: 20px;
 }
+button{
+    background-image: linear-gradient(to right, #007991 0%, #78ffd6  51%, #007991  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+  }
+button:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+
 .Trimmer{
     display: grid;
     grid-template-columns: repeat(4, 200px);

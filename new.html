@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+</body>
+<script>
+    let container = document.getElementById("container")
+    fetch("https://639b343431877e43d685bec6.mockapi.io/new-products")
+    .then((responseData)=>{
+        return responseData.json();
+    })
+    .then((actualData)=>{
+        sumita(actualData)
+    })
+
+
+    function sumita(data){
+        data.forEach((element,index)=>{
+            let card = document.createElement("div");
+            let image = document.createElement("img");
+            image.setAttribute("src",element.avatar)
+            let title =document.createElement("h3");
+            title.innerText=element.title;
+            let add = document.createElement("button");
+            add.innerText = "ADD"
+
+            add.addEventListener("click",()=>{
+                let cartItems = JSON.parse(localStorage.getItem("cart-items"))||[];
+                cartItems.push(element);
+                localStorage.setItem("cart-items",JSON.stringify(cartItems))
+            })
+            card.append(image,title,add);
+            container.append(card)
+        })
+    }
+    let container2= document.getElementById("container")
+    let cartItems = JSON.parse(localStorage.getItem("cart-items"))||[];
+
+    function sumita2(data){
+        container.innerHTML=null;
+        data.forEach((element,index)=>{
+            let card = document.createElement("div");
+            let image = document.createElement("img");
+            image.setAttribute("src",element.avatar)
+            let title =document.createElement("h3");
+            title.innerText=element.title;
+            let deleteItem = document.createElement("button");
+            deleteItem.innerText = "Delete";
+
+            deleteItem.addEventListener("click",()=>{
+                cartItems.splice(index,1);
+                localStorage.setItem("cart-items",JSON.stringify(cartItems));
+                sumita2(cartItems)
+            })
+            card.append(image,title,deleteItem);
+            container.append(card)
+    })
+}
+sumita2(cartItems)
+</script>
+</html>

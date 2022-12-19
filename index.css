@@ -156,20 +156,3 @@ button:hover {
     /* width: 250px; */
     height: 400px;
 }
-
-.navBarPro {
-    position: absolute;
-    background-color: white;
-    display: none;
-    right: 0px;
-    z-index: 1;
-    margin: 12px;
-    width: 600px;
-    font-size: 14px;
-    line-height: 30px;
-    border: 1px solid rgb(204, 203, 203);
-}
-.navSale:hover .navBarPro {
-    display: block;
-    color: black;
-   }

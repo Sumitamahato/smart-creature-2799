@@ -22,38 +22,46 @@
         }
 
         #head1 {
-            display: flex;
-            justify-content: end;
-            gap: 20px;
-            color: white;
-            /* background-color: red; */
-            background-color: #e42529;
-        }
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+    color: white;
+    /* background-color: red; */
+    /* background-color: #e42529; */
+    background-color: #25aee4;
+}
 
-        #head2 {
-            display: flex;
-            justify-content: space-between;
-            color: white;
-            /* background-color: red; */
-            background-color: #e42529;
-            padding: 20px;
-        }
+#head2 {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    /* background-color: red; */
+    background-color: #25aee4;
+    padding: 20px;
+}
 
-        #head2>div {
-            display: flex;
-            gap: 20px
-        }
+#head2>div {
+    display: flex;
+    gap: 20px
+}
 
-        #head3>ul {
-            display: grid;
-            grid-template-columns: repeat(8, 1fr);
-            color: white;
-        }
+#head3>ul {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    color: white;
+}
 
-        #head3 {
-            background-color: blue;
-            padding: 10px;
-        }
+#head3 {
+    background-color: blue;
+    padding: 10px;
+}
+
+#search-bar {
+    border-radius: 20px;
+    width: 450px;
+    padding: 0px 10px;
+    border: none;
+}
         #btn{
             background-image: linear-gradient(to right, #007991 0%, #78ffd6  51%, #007991  100%);
             margin: 10px;
@@ -78,13 +86,14 @@
     <!-- <div id="container"></div> -->
 
     <body>
+        
         <div id="head1">
             <h3><i class="fa fa-map-marker" aria-hidden="true"></i>Find a store</h3>
             <h3>Buying guides</h3>
             <h3>Contact Us</h3>
         </div>
         <div id="head2">
-            <img src="https://www.reliancedigital.in/build/client/images/loaders/rd_logo.svg">
+            <img src="./supermart.img.png" width="100px">
             <input type="text" id="search-bar" placeholder="Find your favorite products">
             <h3>Select your PIN Code</h3>
             <h3><i class="fa fa-shopping-cart header__maininfo__list__item__icon" aria-hidden="true"></i>Cart</h3>
@@ -107,8 +116,7 @@
     
 </head>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-<body>
-    
+
     <div class="swiper">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
